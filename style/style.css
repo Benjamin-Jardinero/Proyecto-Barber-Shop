@@ -1,0 +1,37 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.logo {
+  width: 120px;
+  height: 120px;
+  border: 2px solid orange;
+  border-radius: 15%;
+}
+
+.logo__a :hover {
+  border: 2px dotted orange;
+}
+
+.header__item ul li {
+  margin: 0 10px;
+}
+
+.header__item ul li a {
+  font-size: 1.5rem;
+}
+
+.section__inicio--div {
+  background-color: #fd7e14;
+  width: 100%;
+  text-align: center;
+}
+
+.section__inicio--div a {
+  text-decoration: none;
+  color: white;
+  font-size: 3rem;
+  font-family: cursive;
+}
+/*# sourceMappingURL=style.css.map */

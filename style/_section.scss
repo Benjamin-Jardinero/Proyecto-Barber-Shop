@@ -1,0 +1,16 @@
+$orange-500: #fd7e14;
+
+.section__inicio--div{
+        background-color: $orange-500;
+        width: 100%;
+        text-align: center;
+        a{
+            text-decoration: none;
+            color: white;
+            font: {
+                size: 3rem;
+                family: cursive;
+            }   
+        }
+
+        }
