@@ -47,6 +47,32 @@
   grid-row-gap: 8px;
 }
 
+#grilla__aside--principal div div {
+  width: 50%;
+  color: white;
+}
+
+#grilla__aside--principal div div h1 {
+  margin: 5px auto;
+  text-align: center;
+  font-family: 'cursive';
+  text-transform: uppercase;
+}
+
+#grilla__aside--principal div div h1:hover {
+  color: #fd7e14;
+}
+
+#grilla__aside--principal div div p {
+  font-size: 1.5rem;
+  margin: 5px 10px;
+}
+
+#grilla__aside--principal img {
+  width: 100%;
+  height: 100%;
+}
+
 .cortes__modernos {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -56,32 +82,6 @@
   -ms-grid-row-span: 2;
   -ms-grid-column: 1;
   grid-area: moderno;
-}
-
-.cortes__modernos div {
-  width: 50%;
-  color: white;
-}
-
-.cortes__modernos div h1 {
-  margin: 5px auto;
-  text-align: center;
-  font-family: 'cursive';
-  text-transform: uppercase;
-}
-
-.cortes__modernos div h1:hover {
-  color: #fd7e14;
-}
-
-.cortes__modernos div p {
-  font-size: 1.5rem;
-  margin: 5px 10px;
-}
-
-.cortes__modernos img {
-  width: 100%;
-  height: 100%;
 }
 
 .cortes__clasicos {
@@ -95,32 +95,6 @@
   display: flex;
 }
 
-.cortes__clasicos div {
-  width: 50%;
-  color: white;
-}
-
-.cortes__clasicos div h1 {
-  margin: 5px auto;
-  text-align: center;
-  font-family: 'cursive';
-  text-transform: uppercase;
-}
-
-.cortes__clasicos div h1:hover {
-  color: #fd7e14;
-}
-
-.cortes__clasicos div p {
-  font-size: 1.5rem;
-  margin: 5px 10px;
-}
-
-.cortes__clasicos img {
-  width: 100%;
-  height: 100%;
-}
-
 .cortes__niños {
   width: 100%;
   -ms-grid-row: 3;
@@ -132,67 +106,40 @@
   display: flex;
 }
 
-.cortes__niños div {
-  width: 50%;
-  color: white;
-}
-
-.cortes__niños div h1 {
-  margin: 5px auto;
-  text-align: center;
-  font-family: 'cursive';
-  text-transform: uppercase;
-}
-
-.cortes__niños div h1:hover {
-  color: #fd7e14;
-}
-
-.cortes__niños div p {
-  font-size: 1.5rem;
-  margin: 5px 10px;
-}
-
-.cortes__niños img {
-  width: 100%;
-  height: 100%;
-}
-
 .cortes__estilistas {
   width: 100%;
   -ms-grid-row: 3;
   -ms-grid-row-span: 2;
   -ms-grid-column: 2;
   grid-area: estilista;
-  width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
 }
 
-.cortes__estilistas div {
-  width: 50%;
-  color: white;
+@media (max-width: 480px) {
+  #grilla__aside--principal {
+        grid-template-areas: "moderno" "clasico" "niños" "estilista";
+    -ms-grid-columns: 100%;
+        grid-template-columns: 100%;
+    -ms-grid-rows: (400px)[4];
+        grid-template-rows: repeat(4, 400px);
+  }
+  #grilla__aside--principal div div p {
+    font-size: 1.1rem;
+  }
 }
 
-.cortes__estilistas div h1 {
-  margin: 5px auto;
-  text-align: center;
-  font-family: 'cursive';
-  text-transform: uppercase;
-}
-
-.cortes__estilistas div h1:hover {
-  color: #fd7e14;
-}
-
-.cortes__estilistas div p {
-  font-size: 1.5rem;
-  margin: 5px 10px;
-}
-
-.cortes__estilistas img {
-  width: 100%;
-  height: 100%;
+@media (min-width: 481px) and (max-width: 938px) {
+  #grilla__aside--principal {
+        grid-template-areas: "moderno" "clasico" "niños" "estilista";
+    -ms-grid-columns: 100%;
+        grid-template-columns: 100%;
+    -ms-grid-rows: (500px)[4];
+        grid-template-rows: repeat(4, 500px);
+  }
+  #grilla__aside--principal p {
+    font-size: 1.5rem;
+  }
 }
 /*# sourceMappingURL=style.css.map */
