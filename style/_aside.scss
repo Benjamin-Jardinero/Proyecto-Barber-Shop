@@ -1,0 +1,122 @@
+$orange-500: #fd7e14;
+
+#grilla__aside--principal{
+    display: grid;
+    grid-template-areas: 
+    "moderno clasico"
+    "moderno clasico"
+    "niños estilista"
+    "niños estilista"
+    ;
+    grid-template-columns: 50% 50%;
+    grid-template-rows: 250px 250px 250px 250px;
+    grid-row-gap: 8px;
+}
+.cortes__modernos{
+    display: flex;
+    width: 100%;
+    grid-area: moderno;
+    div{
+        width: 50%;
+        color: white;
+    h1{
+        margin: 5px auto;
+        text-align: center;
+        font-family: 'cursive';
+        text-transform: uppercase;
+    }
+    h1:hover{
+        color: $orange-500;
+    }
+    p{
+        font-size: 1.5rem;
+        margin: 5px 10px;
+    }
+    }
+    img{
+        width: 100%;
+        height: 100%;
+    }
+
+}
+.cortes__clasicos{
+    width: 100%;
+    grid-area: clasico;
+    display: flex;
+    div{
+        width: 50%;
+        color: white;
+    h1{
+        margin: 5px auto;
+        text-align: center;
+        font-family: 'cursive';
+        text-transform: uppercase;
+    }
+    h1:hover{
+        color: $orange-500;
+    }
+    p{
+        font-size: 1.5rem;
+        margin: 5px 10px;
+    }
+    }
+    img{
+        width: 100%;
+        height: 100%;
+    }
+
+
+}
+.cortes__niños{
+    width: 100%;
+    grid-area: niños;
+    display: flex;
+    div{
+        width: 50%;
+        color: white;
+    h1{
+        margin: 5px auto;
+        text-align: center;
+        font-family: 'cursive';
+        text-transform: uppercase;
+    }
+    h1:hover{
+        color: $orange-500;
+    }
+    p{
+        font-size: 1.5rem;
+        margin: 5px 10px;
+    }
+    }
+    img{
+        width: 100%;
+        height: 100%;
+    }
+}
+.cortes__estilistas{
+    width: 100%;
+    grid-area: estilista;
+    width: 100%;
+    display: flex;
+    div{
+        width: 50%;
+        color: white;
+    h1{
+        margin: 5px auto;
+        text-align: center;
+        font-family: 'cursive';
+        text-transform: uppercase;
+    }
+    h1:hover{
+        color: $orange-500;
+    }
+    p{
+        font-size: 1.5rem;
+        margin: 5px 10px;
+    }
+    }
+    img{
+        width: 100%;
+        height: 100%;
+    }
+}
