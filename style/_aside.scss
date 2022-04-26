@@ -9,7 +9,7 @@ $orange-500: #fd7e14;
     "niños estilista"
     ;
     grid-template-columns: 50% 50%;
-    grid-template-rows: 250px 250px 250px 250px;
+    grid-template-rows: repeat(4,250px);
     grid-row-gap: 8px;
     div div{
         width: 50%;
