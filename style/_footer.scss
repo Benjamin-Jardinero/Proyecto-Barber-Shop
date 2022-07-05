@@ -22,3 +22,13 @@ $orange-500: #fd7e14;
         }
     }
 }
+@media(max-width:820px){
+    .footer__div--redes{
+        i{
+            font-size: 2rem;
+        }
+        span{
+            display: none;
+        }
+    }
+}
