@@ -32,3 +32,15 @@ $orange-500: #fd7e14;
         }
     }
 }
+.footer-copy{
+    background-color: $orange-500;
+    width: 100%;
+    height: 30px;
+    text-align: center;
+    p{
+        color:#f5f5dc
+    }
+    i{
+        color: black;
+    }
+}

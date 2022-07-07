@@ -7,20 +7,41 @@
 .logo {
   width: 120px;
   height: 120px;
-  border: 2px solid orange;
+  border: 2px solid #fd7e14;
   border-radius: 15%;
 }
 
 .logo__a :hover {
-  border: 2px dotted orange;
+  border: 2px dotted #fd7e14;
 }
 
 .header__item ul li {
   margin: 0 10px;
+  background-color: rgba(0, 0, 0, 0.193);
+  border: 2px solid #fd7e14;
+  border-radius: 0 20px 0 20px;
 }
 
 .header__item ul li a {
   font-size: 1.5rem;
+  color: white !important;
+  margin: 0 5px;
+}
+
+.header__item ul li:hover {
+  background-color: black;
+}
+
+.header__item ul li:hover a {
+  color: beige !important;
+}
+
+.section__inicio .div-img {
+  margin-bottom: 20px;
+}
+
+.section__inicio img {
+  height: 100vh;
 }
 
 .section__inicio--div {
@@ -236,5 +257,20 @@ a:hover {
   .footer__div--redes span {
     display: none;
   }
+}
+
+.footer-copy {
+  background-color: #fd7e14;
+  width: 100%;
+  height: 30px;
+  text-align: center;
+}
+
+.footer-copy p {
+  color: #f5f5dc;
+}
+
+.footer-copy i {
+  color: black;
 }
 /*# sourceMappingURL=style.css.map */
