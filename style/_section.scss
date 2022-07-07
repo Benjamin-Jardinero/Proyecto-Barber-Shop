@@ -62,3 +62,19 @@ $orange-500: #fd7e14;
         }
     }
 }
+
+.carrusel-tienda{
+    img{
+        height: 500px;
+    }
+    h5, p{
+        background-color: #000;
+        color: #fd7e14;
+        padding: 10px;
+        border-radius: 20px 0 20px 0;
+    }
+    span{
+        text-decoration: line-through;
+    }
+
+}

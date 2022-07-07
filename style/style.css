@@ -106,6 +106,21 @@ a:hover {
   border-bottom: 2px solid #fd7e14;
 }
 
+.carrusel-tienda img {
+  height: 500px;
+}
+
+.carrusel-tienda h5, .carrusel-tienda p {
+  background-color: #000;
+  color: #fd7e14;
+  padding: 10px;
+  border-radius: 20px 0 20px 0;
+}
+
+.carrusel-tienda span {
+  text-decoration: line-through;
+}
+
 #grilla__aside--principal {
   display: -ms-grid;
   display: grid;
