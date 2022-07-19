@@ -25,13 +25,16 @@ $orange-500: #fd7e14;
         }
 
 /*SECTION / TIENDA*/
-
+.carusel-border{
+    border-radius: 10px;
+}
 .tienda{
     display: flex;
     flex-wrap: wrap;
     margin: 10px auto;
     .tienda-producto{
         width: 500px;
+        border: 5px solid grey;
         border-radius: 10px;
         padding: 10px;
         background-color: rgba(255, 255, 255, 0.064);
@@ -54,11 +57,9 @@ $orange-500: #fd7e14;
         }
     }
     .tienda-producto:hover{
+        border-bottom: 5px solid $orange-500;
         img{
             opacity: 1;
-        }
-        h3,p{
-            border-bottom: 2px solid #fd7e14;
         }
     }
 }
@@ -77,4 +78,69 @@ $orange-500: #fd7e14;
         text-decoration: line-through;
     }
 
+}
+/*SECTION / SOBRE MÍ*/
+
+.titulo-sobremi{
+    h2{
+        left: 0;
+        font-size: 2rem;
+        font-family: monospace;
+        color: white;
+        text-shadow: 2px 2px 2px $orange-500;
+    }
+}
+.img-sobremi{
+    text-align: center;
+    margin: 30px 0;
+    img{
+        width: 300px;
+        height: 300px;
+        border: 2.5px solid $orange-500;
+        border-radius: 50%;
+    }
+    
+}
+.parrafo-sobremi{
+    margin: 20px 0;
+    h2{
+        color: $orange-500;
+        text-align: center;
+        font-family: cursive;
+        margin-bottom: 20px;
+    }
+    p{
+        text-shadow: 2px 2px 2px grey;
+        margin: auto;
+        font-size: 1.2rem;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        color: white;
+        letter-spacing: 3px;
+        margin: 10px 0;
+    }
+    
+}
+.mapa-sobremi{
+    text-align: center;
+    button{
+        width: 180px;
+        height: 50px;
+        background-color: #fd7e14;
+        margin: 10px;
+        border-radius: 10px 0 10px 0;
+        a{
+            font-family: monospace;
+            font-size: 1.5rem;
+            color: white;
+            text-decoration: none;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+        }
+    }
+    button:hover{
+        background-color: #000;
+        a{
+            color: #fd7e14;
+        }
+    }
 }

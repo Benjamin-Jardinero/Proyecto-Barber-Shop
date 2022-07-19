@@ -16,13 +16,15 @@ $orange-500: #fd7e14;
         width: 50%;
         color: white;
     h1{
+        color: $orange-500;
         margin: 5px auto;
         text-align: center;
         font-family: 'cursive';
         text-transform: uppercase;
     }
     h1:hover{
-        color: $orange-500;
+        color: honeydew;
+        text-shadow: 2px 2px 2px gray;
     }
     p{
         font-size: 1.5rem;

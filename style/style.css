@@ -17,8 +17,8 @@
 
 .header__item ul li {
   margin: 0 10px;
-  background-color: rgba(0, 0, 0, 0.193);
-  border: 2px solid #fd7e14;
+  background-color: #fd7e14;
+  border: 2px solid rgba(0, 0, 0, 0.193);
   border-radius: 0 20px 0 20px;
 }
 
@@ -29,7 +29,7 @@
 }
 
 .header__item ul li:hover {
-  background-color: black;
+  background-color: rgba(255, 123, 0, 0.346);
 }
 
 .header__item ul li:hover a {
@@ -62,6 +62,10 @@ a:hover {
 }
 
 /*SECTION / TIENDA*/
+.carusel-border {
+  border-radius: 10px;
+}
+
 .tienda {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -73,6 +77,7 @@ a:hover {
 
 .tienda .tienda-producto {
   width: 500px;
+  border: 5px solid grey;
   border-radius: 10px;
   padding: 10px;
   background-color: rgba(255, 255, 255, 0.064);
@@ -98,12 +103,12 @@ a:hover {
   text-shadow: 2px 2px 2px gray;
 }
 
-.tienda .tienda-producto:hover img {
-  opacity: 1;
+.tienda .tienda-producto:hover {
+  border-bottom: 5px solid #fd7e14;
 }
 
-.tienda .tienda-producto:hover h3, .tienda .tienda-producto:hover p {
-  border-bottom: 2px solid #fd7e14;
+.tienda .tienda-producto:hover img {
+  opacity: 1;
 }
 
 .carrusel-tienda img {
@@ -119,6 +124,77 @@ a:hover {
 
 .carrusel-tienda span {
   text-decoration: line-through;
+}
+
+/*SECTION / SOBRE MÍ*/
+.titulo-sobremi h2 {
+  left: 0;
+  font-size: 2rem;
+  font-family: monospace;
+  color: white;
+  text-shadow: 2px 2px 2px #fd7e14;
+}
+
+.img-sobremi {
+  text-align: center;
+  margin: 30px 0;
+}
+
+.img-sobremi img {
+  width: 300px;
+  height: 300px;
+  border: 2.5px solid #fd7e14;
+  border-radius: 50%;
+}
+
+.parrafo-sobremi {
+  margin: 20px 0;
+}
+
+.parrafo-sobremi h2 {
+  color: #fd7e14;
+  text-align: center;
+  font-family: cursive;
+  margin-bottom: 20px;
+}
+
+.parrafo-sobremi p {
+  text-shadow: 2px 2px 2px grey;
+  margin: auto;
+  font-size: 1.2rem;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  color: white;
+  letter-spacing: 3px;
+  margin: 10px 0;
+}
+
+.mapa-sobremi {
+  text-align: center;
+}
+
+.mapa-sobremi button {
+  width: 180px;
+  height: 50px;
+  background-color: #fd7e14;
+  margin: 10px;
+  border-radius: 10px 0 10px 0;
+}
+
+.mapa-sobremi button a {
+  font-family: monospace;
+  font-size: 1.5rem;
+  color: white;
+  text-decoration: none;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+.mapa-sobremi button:hover {
+  background-color: #000;
+}
+
+.mapa-sobremi button:hover a {
+  color: #fd7e14;
 }
 
 #grilla__aside--principal {
@@ -139,6 +215,7 @@ a:hover {
 }
 
 #grilla__aside--principal div div h1 {
+  color: #fd7e14;
   margin: 5px auto;
   text-align: center;
   font-family: 'cursive';
@@ -146,7 +223,8 @@ a:hover {
 }
 
 #grilla__aside--principal div div h1:hover {
-  color: #fd7e14;
+  color: honeydew;
+  text-shadow: 2px 2px 2px gray;
 }
 
 #grilla__aside--principal div div p {
@@ -281,11 +359,7 @@ a:hover {
   text-align: center;
 }
 
-.footer-copy p {
-  color: #f5f5dc;
-}
-
-.footer-copy i {
-  color: black;
+.footer-copy p, .footer-copy i {
+  color: #000000;
 }
 /*# sourceMappingURL=style.css.map */
