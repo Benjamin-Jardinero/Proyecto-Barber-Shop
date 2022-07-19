@@ -362,4 +362,19 @@ a:hover {
 .footer-copy p, .footer-copy i {
   color: #000000;
 }
+
+.contacto-fondo {
+  background-image: url(/img/barbershop.jpg);
+  height: 1000px;
+  width: 100%;
+  margin: 20px;
+}
+
+.contacto-fondo form {
+  padding: 25px;
+}
+
+.contacto-fondo form div {
+  margin: 20px 0;
+}
 /*# sourceMappingURL=style.css.map */
