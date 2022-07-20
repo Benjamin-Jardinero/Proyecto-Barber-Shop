@@ -8,6 +8,7 @@
     <link rel="icon" href="img/tienda/navaja.jpg">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
     <link rel="stylesheet" href="style/style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
 </head>
 <body class="bg-dark">
 <!--HEADER / LOGO / NAVEGADOR-->
@@ -45,31 +46,38 @@
     </header>
 <main class="container">
     <div class="contacto-fondo">
+      <div class="contacto-titulo">
+        <h1>Contacto</h1>
+      </div>
         <form method="post">
-            <div class="row g-3">
-                <div class="col form-floating">
+            <div>
+                <div class="form-floating">
                   <input type="text" class="form-control" placeholder="name" id="floatingInput">
-                  <label for="floatingInput">Nombre</label>
+                  <label for="floatingInput"><i class="bi bi-person"></i> Nombre</label>
                 </div>
-                <div class="col form-floating">
+                <div class="form-floating">
                   <input type="text" class="form-control" placeholder="surname" id="floatingInput" >
-                  <label for="floatingInput">Apellido</label>
+                  <label for="floatingInput"><i class="bi bi-person"></i> Apellido</label>
                 </div>
             </div>
             <div class="form-floating">
                 <input type="email" class="form-control" id="floatingInput" placeholder="name@example.com">
-                <label for="floatingInput">Correo Electronico</label>
+                <label for="floatingInput"><i class="bi bi-at"></i>Correo Electronico</label>
             </div>
             <div class="form-floating">
-                <select class="form-select" id="floatingSelect" aria-label="Floating label select example">
+                <select class="form-select" id="floatingSelect">
                   <option selected>Seleccione una opción</option>
                   <option value="1">Masculino</option>
                   <option value="2">Femenino</option>
                 </select>
               </div>
-            <div class="form-floating">
-                <textarea class="form-control" placeholder="Leave a comment here" id="floatingTextarea2" style="height: 100px"></textarea>
+            <div class="form-floating form-mensaje">
+                <textarea class="form-control" placeholder="Leave a comment here" id="floatingTextarea2" style="height: 500px"></textarea>
                 <label for="floatingTextarea2">Mensaje</label>
+              </div>
+              <div class="form-boton">
+                <input type="submit" value="Enviar">
+                <input type="reset" value="Limpiar">
               </div>
         </form>
     </div>
