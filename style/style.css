@@ -379,7 +379,7 @@ a:hover {
   background-image: url(/img/barbershop.jpg);
   height: 1200px;
   width: 100%;
-  margin: 20px;
+  margin: 20px auto;
 }
 
 .contacto-fondo form {
@@ -406,7 +406,7 @@ a:hover {
   font-family: cursive;
 }
 
-.contacto-fondo form input:hover {
+.contacto-fondo form .form-boton input:hover {
   background-color: #fd7e14;
   color: white;
   border: 2px solid black;
@@ -414,7 +414,7 @@ a:hover {
 
 @media (max-width: 768px) {
   .contacto-fondo form .form-mensaje {
-    width: 80%;
+    width: 97%;
   }
 }
 /*# sourceMappingURL=style.css.map */

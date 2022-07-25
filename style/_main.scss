@@ -15,7 +15,7 @@ $orange-500: #fd7e14;
     background-image: url(/img/barbershop.jpg);
     height: 1200px;
     width: 100%;
-    margin: 20px;
+    margin: 20px auto;
     form{
         padding: 25px;
         div{
@@ -36,19 +36,20 @@ $orange-500: #fd7e14;
                 font-size: 2rem;
                 font-family: cursive;
             }
-        }
-        input:hover{
+            input:hover{
             background-color: $orange-500;
             color: white;
             border: 2px solid black;
         }
+        }
+        
     }
 }
 @media(max-width: 768px){
     .contacto-fondo{
         form{
           .form-mensaje{
-        width: 80%;  
+        width: 97%;  
         }
     }
     }
