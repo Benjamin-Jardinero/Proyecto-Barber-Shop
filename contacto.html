@@ -52,27 +52,27 @@
         <form method="post">
             <div>
                 <div class="form-floating">
-                  <input type="text" class="form-control" placeholder="name" id="floatingInput">
+                  <input type="text" class="form-control" placeholder="name" id="floatingInput" required>
                   <label for="floatingInput"><i class="bi bi-person"></i> Nombre</label>
                 </div>
                 <div class="form-floating">
-                  <input type="text" class="form-control" placeholder="surname" id="floatingInput" >
+                  <input type="text" class="form-control" placeholder="surname" id="floatingInput" required>
                   <label for="floatingInput"><i class="bi bi-person"></i> Apellido</label>
                 </div>
             </div>
             <div class="form-floating">
-                <input type="email" class="form-control" id="floatingInput" placeholder="name@example.com">
+                <input type="email" class="form-control" id="floatingInput" placeholder="name@example.com" required>
                 <label for="floatingInput"><i class="bi bi-at"></i>Correo Electronico</label>
             </div>
             <div class="form-floating">
-                <select class="form-select" id="floatingSelect">
+                <select class="form-select" id="floatingSelect" required>
                   <option selected>Seleccione una opción</option>
                   <option value="1">Masculino</option>
                   <option value="2">Femenino</option>
                 </select>
               </div>
             <div class="form-floating form-mensaje">
-                <textarea class="form-control" placeholder="Leave a comment here" id="floatingTextarea2" style="height: 500px"></textarea>
+                <textarea class="form-control" required placeholder="Leave a comment here" id="floatingTextarea2" style="height: 500px"></textarea>
                 <label for="floatingTextarea2">Mensaje</label>
               </div>
               <div class="form-boton">
