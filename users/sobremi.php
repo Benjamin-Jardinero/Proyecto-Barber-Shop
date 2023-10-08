@@ -16,7 +16,7 @@
           <nav class="navbar navbar-expand-lg bg-dark navbar-dark ">
            <div class="container-fluid">
 
-              <a class="navbar-brand logo__a" href="index.html">
+              <a class="navbar-brand logo__a" href="index.php">
                 <img src="img/logo.png" alt="Logo"  class="d-inline-block align-text-top logo">
               </a>
 
@@ -27,19 +27,20 @@
               <div class="collapse navbar-collapse header__item" id="navbarSupportedContent">
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                   <li class="nav-item">
-                    <a class="nav-link" aria-current="page" href="tienda.html">Tienda</a>
+                    <a class="nav-link" aria-current="page" href="tienda.php">Tienda</a>
                   </li>
                   <li class="nav-item">
-                    <a class="nav-link" href="sobremi.html">Sobre mí</a>
+                    <a class="nav-link" href="sobremi.php">Sobre mí</a>
                   </li>
                    <li class="nav-item">
-                    <a class="nav-link" href="contacto.html">Contacto</a>
+                    <a class="nav-link" href="contacto.php">Contacto</a>
                   </li>
                 </ul>
                 <form class="d-flex">
                     <input class="form-control me-2" type="search" placeholder="Buscar" aria-label="Search">
                     <button class="btn btn-outline-light" type="submit">Search</button>
                   </form>
+                  <a href="../cerrarsesion.php" class="a-cerrar"><i class="fa-regular fa-user"></i>Cerrar Sesión</a>
               </div>
             </div>
           </nav>

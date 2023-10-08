@@ -36,6 +36,16 @@
   color: beige !important;
 }
 
+.header__item .a-cerrar {
+  margin: auto 15px;
+  text-decoration: none;
+  color: #fd7e14;
+}
+
+.header__item .a-cerrar i {
+  color: #9b4c0b;
+}
+
 .section__inicio .div-img {
   margin-bottom: 20px;
 }
@@ -381,14 +391,13 @@ a:hover {
 
 .contacto-titulo {
   color: white;
-  text-shadow: 2px 2px 2px gray;
+  text-shadow: 2px 2px 2px #fd7e14;
   font-family: monospace;
 }
 
 .contacto-titulo h1 {
   text-align: center;
   font-size: 5rem;
-  background-color: rgba(0, 0, 0, 0.362);
 }
 
 .contacto-fondo {

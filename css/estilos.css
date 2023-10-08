@@ -1,0 +1,67 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    /*background: linear-gradient(#e66465, #9198e5);*/
+    background-image: url(../img/fondo.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+}
+.main-container{
+    margin: 20px auto;
+    padding: 20px;
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    
+}
+.titulo{
+    font-size: 3rem;
+    font-family: cursive;
+    color: #fd7e14;
+    text-shadow: 2px 2px 2px rgb(255, 255, 255);
+}
+.seccion-container{
+    background-color: rgb(15,16,14,0.3);
+    border-radius: 20px;
+    margin: 20px auto;
+    padding: 20px;
+    width: 50%;
+}
+.div-correo label, .div-password label, .div-name label, h3{
+    font-size: 2rem;
+    font-family: cursive;
+    color:white;
+    text-shadow: 2px 2px 2px #fd7e14;
+}
+span{
+    color: aliceblue;
+}
+.i-color{
+    color: #fdab67;
+}
+.div-btn, h3{
+    display: flex;
+    justify-content: center;
+}
+.btn-ingresar{
+    font-size: 1.2rem;
+    background-color: #fd7e14;
+    color: white;
+    text-shadow: 2px 2px 2px grey;
+}
+.btn-ingresar:hover{
+    background-color: #91480d;
+    color: white;
+    text-shadow: 2px 2px 2px grey;
+}
+.form-control{
+    border: 2px solid #fd7e14;
+}
+a{
+    color: #fd7e14;
+}
