@@ -1,101 +1,109 @@
-<!DOCTYPE html>
-<html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contacto - Benja Lazarte</title>
-    <link rel="icon" href="img/tienda/navaja.jpg">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
-    <link rel="stylesheet" href="style/style.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
-</head>
-<body class="bg-dark">
-<!--HEADER / LOGO / NAVEGADOR-->
-    <header>
-          <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-           <div class="container-fluid">
+<?php
+use PHPMailer\PHPMailer\PHPMailer;
+use PHPMailer\PHPMailer\SMTP;
+use PHPMailer\PHPMailer\Exception;
 
-              <a class="navbar-brand logo__a" href="index.php">
-                <img src="img/logo.png" alt="Logo"  class="d-inline-block align-text-top logo">
-              </a>
+require 'PHPMailer/Exception.php';
+require 'PHPMailer/PHPMailer.php';
+require 'PHPMailer/SMTP.php';
 
-              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-              </button>
+// Comprobando si los datos se envian por el metodo POST
+// if ($_SERVER['REQUEST_METHOD'] == 'POST') {
+// 	echo "Se enviaron por POST";
+// }
 
-              <div class="collapse navbar-collapse header__item" id="navbarSupportedContent">
-                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                  <li class="nav-item">
-                    <a class="nav-link" aria-current="page" href="tienda.php">Tienda</a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link" href="sobremi.php">Sobre mí</a>
-                  </li>
-                   <li class="nav-item">
-                    <a class="nav-link" href="contacto.php">Contacto</a>
-                  </li>
-                </ul>
-                <form class="d-flex">
-                    <input class="form-control me-2" type="search" placeholder="Buscar" aria-label="Search">
-                    <button class="btn btn-outline-light" type="submit">Search</button>
-                  </form>
+$errores = '';
+$enviado = '';
 
-                  <a href="../cerrarsesion.php" class="a-cerrar"><i class="fa-regular fa-user"></i>Cerrar Sesión</a>
-              </div>
-            </div>
-          </nav>
-    </header>
-<main class="container">
-    <div class="contacto-fondo">
-      <div class="contacto-titulo">
-        <h1>Contacto</h1>
-      </div>
-        <form method="post" id="grilla_contacto">
-            <div class="contac_1">
-                <div class="form-floating">
-                  <input type="text" class="form-control" placeholder="name" id="floatingInput" required>
-                  <label for="floatingInput"><i class="bi bi-person"></i> Nombre</label>
-                </div>
-                <div class="form-floating">
-                  <input type="text" class="form-control" placeholder="surname" id="floatingInput" required>
-                  <label for="floatingInput"><i class="bi bi-person"></i> Apellido</label>
-                </div>
-            </div>
-            <div class="form-floating contac_2">
-                <input type="email" class="form-control" id="floatingInput" placeholder="name@example.com" required>
-                <label for="floatingInput"><i class="bi bi-at"></i>Correo Electronico</label>
-            </div>
+// Comprobamos que el formulario haya sido enviado.
+if (isset($_POST['submit'])) {
+	$nombre = $_POST['nombre'];
+	$correo = $_POST['correo'];
+	$mensaje = $_POST['mensaje'];
 
-            <div class="form-floating form-mensaje contac_3">
-                <textarea class="form-control" required placeholder="Leave a comment here" id="floatingTextarea2" style="height: 300px"></textarea>
-                <label for="floatingTextarea2">Mensaje</label>
-              </div>
-              <div class="form-boton contac_4">
-                <input type="submit" value="Enviar">
-                <input type="reset" value="Limpiar">
-              </div>
-        </form>
-    </div>
-</main>
-<!--FOOTER / REDES SOCIALES-->
-<footer class="bg-dark footer-redes">
-  <div class="footer__div--redes">
-    <ul>
-      <li><a href="#"><i class="fa-brands fa-whatsapp"><span> Whatsapp</span></i></a></li>
-      <li><a href="https://www.facebook.com/BenjaCARP2"><i class="fa-brands fa-facebook-square"><span> Facebook</span></i></a></li>
-      <li><a href="https://www.instagram.com/benja_laza"><i class="fa-brands fa-instagram"><span> Instagram</span></i></a></li>
-      <li><a href="https://twitter.com/BenjaLaza1"><i class="fa-brands fa-twitter"><span> Twitter</span></i></a></li>
-    </ul>
-  </div>
-  <div class="footer-copy">
-    <p><i class="fa-solid fa-copyright"></i> Todos los derechos estan reservados 2022</p>
-  </div>
-  </footer>
+// Comprobamos que el nombre no este vacio.
+	if (!empty($nombre)) {
+		// Saneamos el nombre para eliminar caracteres que no deberian estar.
+		$nombre = trim($nombre);
+		$nombre = filter_var($nombre, FILTER_SANITIZE_STRING);
+		// Comprobamos que el nombre despues de quitar los caracteres ilegales no este vacio.
+		if ($nombre == "") {
+			$errores.= 'Por favor ingresa un nombre.<br />';
+		}
+	} else {
+		$errores.= 'Por favor ingresa un nombre.<br />';
+	}
 
+	if (!empty($correo)) {
+		$correo = filter_var($correo, FILTER_SANITIZE_EMAIL);
+		// Comprobamos que sea un correo valido
+		if (!filter_var($correo, FILTER_VALIDATE_EMAIL)) {
+			$errores.= "Por favor ingresa un correo valido.<br />";
+		}
+	} else {
+		$errores.= 'Por favor ingresa un correo.<br />';
+	}
+
+
+	if (!empty($mensaje)) {
+		// Podemos sanear la cadena de texto con filter_var, pero queremos que en el mensaje los signos se conviertan en entidades HTML
+		$mensaje = htmlspecialchars($mensaje);
+		$mensaje = trim($mensaje);
+		$mensaje = stripslashes($mensaje);
+	} else {
+		$errores.= 'Por favor ingresa el mensaje.<br />';
+	}
+
+// Comprobamos si hay errores, si no hay entonces enviamos.
+	if (!$errores) {
+
+
+
+
+
+
+// se instancia el objeto de php mailer 
+$mail = new PHPMailer(true);
+
+
+
+try {
+    //configuracion del servidor 
+    $mail->SMTPDebug = 0;                                       // ver errores 
+    $mail->isSMTP();                                            //Send using SMTP
+    $mail->Host       = 'smtp.office365.com';                     //smtp cambia dependiendo el mail que se usa
+    $mail->SMTPAuth   = true;                                   //
+    $mail->Username   = '42027184@itbeltran.com.ar';                     //SMTP mail de donde sale estos datos los usa para entrar a tu mail
+    $mail->Password   = 'Enzoperez24';                               //SMTP clave de tu mail
+    $mail->SMTPSecure = 'tls';            //Enable implicit TLS encryption
+    $mail->Port       = 587;                                    //TCP port el puerto cambia dependiendo de donde se manda gmail/hotmail/oficce365
+
+    //Recipients
+    $mail->setFrom('42027184@itbeltran.com.ar', 'Benja');// desde donde se manda
+    $mail->addAddress($correo, 'user');     //quien lo recibe 
     
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js" integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js" integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous"></script>
-    <script src="https://kit.fontawesome.com/ffb39b6180.js" crossorigin="anonymous"></script>
-  </body>
-</html>
+
+   
+
+    //Contenido del mail 
+    $mail->isHTML(true);                                  //Set email format to HTML
+    $mail->Subject = 'Enviado desde Barber Shop';
+    $mail->Body    = $mensaje; // este mensaje se toma de la vista
+    
+    $mail->send(); // se envia el mail
+
+} catch (Exception $e) { ?>
+	<div class="alert error" role="alert">
+		<?php echo "NO SE PUDO ENVIAR EL ERROR ES EL SIGUIENTE: {$mail->ErrorInfo}"; ?>
+	</div>
+ <?php   
+}
+
+
+}
+
+}
+
+
+require 'mailer.php';
+?>

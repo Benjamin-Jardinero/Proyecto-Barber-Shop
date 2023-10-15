@@ -35,15 +35,22 @@
                     <a class="nav-link" href="contacto.php">Contacto</a>
                   </li>
                 </ul>
-
                 
+                <div class="dropdown" id="dropdown-list">
+                  <a class="btn btn-secondary dropdown-toggle"  role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    <i class="fa-regular fa-user"></i>
+                  </a>
+                  <ul class="dropdown-menu dropdown-menu-dark">
+                    <li><a class="dropdown-item" href="#">Perfil</a></li>
+                    <li><a class="dropdown-item" href="#">Ayuda</a></li>
+                    <li><a class="dropdown-item" href="../cerrarsesion.php">Cerrar sesión</a></li>
+                  </ul>
+                </div>
 
                 <form class="d-flex">
                     <input class="form-control me-2" type="search" placeholder="Buscar" aria-label="Search">
                     <button class="btn btn-outline-light" type="submit">Search</button>
                 </form>
-
-                <a href="../cerrarsesion.php" class="a-cerrar"><i class="fa-regular fa-user"></i>Cerrar Sesión</a>
               </div>
             </div>
           </nav>
@@ -102,10 +109,10 @@
     <footer class="bg-dark footer-redes">
       <div class="footer__div--redes">
         <ul>
-          <li><a href="#"><i class="fa-brands fa-whatsapp"><span> Whatsapp</span></i></a></li>
-          <li><a href="https://www.facebook.com/BenjaCARP2"><i class="fa-brands fa-facebook-square"><span> Facebook</span></i></a></li>
-          <li><a href="https://www.instagram.com/benja_laza"><i class="fa-brands fa-instagram"><span> Instagram</span></i></a></li>
-          <li><a href="https://twitter.com/BenjaLaza1"><i class="fa-brands fa-twitter"><span> Twitter</span></i></a></li>
+          <li><a href="#"><i class="fa-brands fa-whatsapp"></i><span> Whatsapp</span></a></li>
+          <li><a href="https://www.facebook.com/BenjaCARP2"><i class="fa-brands fa-facebook-square"></i><span> Facebook</span></a></li>
+          <li><a href="https://www.instagram.com/benja_laza"><i class="fa-brands fa-instagram"></i><span> Instagram</span></a></li>
+          <li><a href="https://twitter.com/BenjaLaza1"><i class="fa-brands fa-twitter"></i><span> Twitter</span></a></li>
         </ul>
       </div>
       <div class="footer-copy">
@@ -114,8 +121,8 @@
       </footer>
 
     
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js" integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js" integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js" integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+" crossorigin="anonymous"></script>
     <script src="https://kit.fontawesome.com/ffb39b6180.js" crossorigin="anonymous"></script>
   </body>
 </html>

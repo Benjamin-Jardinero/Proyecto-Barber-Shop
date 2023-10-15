@@ -17,20 +17,18 @@ $orange-500: #fd7e14;
     width: 100%;
     margin: 20px auto;
     form{
+        width: 60%;
         padding: 25px;
+        margin: auto;
         div{
             text-align: center;
             margin: 20px 5px;
-        }
-        .form-mensaje{
-            width: 70%;
-            margin: 0 auto;
         }
         .form-boton{
             input{
                 border: 2px solid white;
                 margin: 20px 0;
-                width: 300px;
+                width: 250px;
                 height: 60px;
                 background-color: black;
                 color: #fd7e14;

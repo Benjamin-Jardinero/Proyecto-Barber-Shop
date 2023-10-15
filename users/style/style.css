@@ -36,14 +36,26 @@
   color: beige !important;
 }
 
-.header__item .a-cerrar {
-  margin: auto 15px;
-  text-decoration: none;
-  color: #fd7e14;
+#dropdown-list {
+  margin: auto 5px;
 }
 
-.header__item .a-cerrar i {
-  color: #9b4c0b;
+#dropdown-list li a {
+  font-size: 1.5rem;
+  color: white !important;
+  margin: 0 5px;
+}
+
+#dropdown-list li:hover {
+  background-color: rgba(255, 123, 0, 0.346) !important;
+  margin: 0 10px;
+}
+
+#dropdown-list li:hover a {
+  border-radius: 0 20px 0 20px;
+  border: 2px solid rgba(0, 0, 0, 0.193);
+  background-color: rgba(255, 123, 0, 0.346) !important;
+  color: white !important;
 }
 
 .section__inicio .div-img {
@@ -357,7 +369,7 @@ a:hover {
 
 .footer__div--redes ul li {
   margin: 0 10px;
-  font-size: 1.3rem;
+  font-size: 1.5rem;
 }
 
 .footer__div--redes ul li a {
@@ -409,7 +421,9 @@ a:hover {
 }
 
 .contacto-fondo form {
+  width: 60%;
   padding: 25px;
+  margin: auto;
 }
 
 .contacto-fondo form div {
@@ -417,15 +431,10 @@ a:hover {
   margin: 20px 5px;
 }
 
-.contacto-fondo form .form-mensaje {
-  width: 70%;
-  margin: 0 auto;
-}
-
 .contacto-fondo form .form-boton input {
   border: 2px solid white;
   margin: 20px 0;
-  width: 300px;
+  width: 250px;
   height: 60px;
   background-color: black;
   color: #fd7e14;

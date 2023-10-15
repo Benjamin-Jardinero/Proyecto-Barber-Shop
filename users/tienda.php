@@ -35,11 +35,20 @@
                     <a class="nav-link" href="contacto.php">Contacto</a>
                   </li>
                 </ul>
+                <div class="dropdown" id="dropdown-list">
+                  <a class="btn btn-secondary dropdown-toggle"  role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    <i class="fa-regular fa-user"></i>
+                  </a>
+                  <ul class="dropdown-menu dropdown-menu-dark">
+                    <li><a class="dropdown-item" href="#">Perfil</a></li>
+                    <li><a class="dropdown-item" href="#">Ayuda</a></li>
+                    <li><a class="dropdown-item" href="../cerrarsesion.php">Cerrar sesión</a></li>
+                  </ul>
+                </div>
                 <form class="d-flex">
                     <input class="form-control me-2" type="search" placeholder="Buscar" aria-label="Search">
                     <button class="btn btn-outline-light" type="submit">Search</button>
-                  </form>
-                  <a href="../cerrarsesion.php" class="a-cerrar"><i class="fa-regular fa-user"></i>Cerrar Sesión</a>
+                </form>
               </div>
             </div>
           </nav>
@@ -154,12 +163,12 @@
 <!--FOOTER / REDES SOCIALES-->
 <footer class="bg-dark footer-redes">
   <div class="footer__div--redes">
-    <ul>
-      <li><a href="#"><i class="fa-brands fa-whatsapp"><span> Whatsapp</span></i></a></li>
-      <li><a href="https://www.facebook.com/BenjaCARP2"><i class="fa-brands fa-facebook-square"><span> Facebook</span></i></a></li>
-      <li><a href="https://www.instagram.com/benja_laza"><i class="fa-brands fa-instagram"><span> Instagram</span></i></a></li>
-      <li><a href="https://twitter.com/BenjaLaza1"><i class="fa-brands fa-twitter"><span> Twitter</span></i></a></li>
-    </ul>
+      <ul>
+        <li><a href="#"><i class="fa-brands fa-whatsapp"></i><span> Whatsapp</span></a></li>
+        <li><a href="https://www.facebook.com/BenjaCARP2"><i class="fa-brands fa-facebook-square"></i><span> Facebook</span></a></li>
+        <li><a href="https://www.instagram.com/benja_laza"><i class="fa-brands fa-instagram"></i><span> Instagram</span></a></li>
+        <li><a href="https://twitter.com/BenjaLaza1"><i class="fa-brands fa-twitter"></i><span> Twitter</span></a></li>
+      </ul>
   </div>
   <div class="footer-copy">
     <p><i class="fa-solid fa-copyright"></i> Todos los derechos estan reservados 2022</p>
