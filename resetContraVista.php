@@ -11,34 +11,32 @@
 
     <main class="main-container container">
       <div>
-        <h1 class="titulo">Barber Shop</h1>
+        <h1 class="titulo">Restablecer contraseña</h1>
       </div>
     </main>
 
     <section class="container seccion-container">
-        <form method="post">
+        <form method="post" action="<?php echo htmlspecialchars($_SERVER['PHP_SELF']); ?>">
 
             <div class="mb-3 div-correo">
               <label for="exampleInputEmail1" class="form-label"><i class="fa-solid fa-envelope i-color"></i> Correo Electronico</label>
-              <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="name@gmail.com" name="correoRegister">
+              <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="name@gmail.com" name="correoReset2">
+            </div>
+
+            <div class="mb-3 div-password">
+              <label for="exampleInputPassword1" class="form-label"><i class="fa-solid fa-key i-color"></i> Contraseña nueva</label>
+              <input type="password" class="form-control" id="exampleInputPassword1" placeholder="password" name="passwordNueva">
+            </div>
+
+            <div class="mb-3 div-password">
+              <label for="exampleInputPassword1" class="form-label"><i class="fa-solid fa-key i-color"></i> Confirmar Contraseña</label>
+              <input type="password" class="form-control" id="exampleInputPassword1" placeholder="password" name="passwordNew">
             </div>
     
-            <div class="mb-3 div-password">
-              <label for="exampleInputPassword1" class="form-label"><i class="fa-solid fa-key i-color"></i> Contraseña</label>
-              <input type="password" class="form-control" id="exampleInputPassword1" placeholder="password" name="passwordRegister">
-            </div>
-
             <div class="mb-3 div-btn">
-              <button type="submit" class="btn btn-ingresar" name="iniciarsesion">Iniciar Sesión</button>
-            </div>
-            <div class="mb-3 div-span">
-              <p><a href="resetVista..php">¿Has olvidado tu contraseña?</a></p>
+              <button type="submit" class="btn btn-ingresar" name="resetPassword">Cambiar</button>
             </div>
 
-            <div class="div-registrarse">
-              <span>¿No tenes cuenta?</span>
-              <a href="vista2.php">Registrate!</a>
-            </div>
           </form>
     </section>
 
@@ -48,5 +46,5 @@
 </html>
 
 <?php
-  include("loguear.php");
+  include("resetContras.php");
 ?>
