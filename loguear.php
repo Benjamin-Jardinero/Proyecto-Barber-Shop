@@ -1,41 +1,48 @@
 <?php
     include("con_bd.php");
+    session_start();
 
     if (isset($_POST['iniciarsesion'])) {
         if (strlen($_POST['correoRegister']) > 1 && strlen($_POST['passwordRegister']) > 1) {
             $correoR  = $_POST['correoRegister'];
             $passR = $_POST['passwordRegister'];
             $correo = "Prueba@gmail.com";
-            $pass;
+            $stored_hash;
             $nombre;
-            
+            $id;
 
-            $consulta = "Select * from registros";
+            $consulta = "SELECT * FROM registros";
             $resultado = mysqli_query($conex, $consulta);
 
             if ($resultado) {
                 while ($row = $resultado -> fetch_array()) {
+                    //Obtenemos todos los resultados de la base de datos
                     $correo = $row['correo'];
-                    $pass = $row['contraseña'];
-                    
-                    if ($correoR == $correo && $passR == $pass) {
-                        $nombre = $row['nombre'];
-                        break;
+                    $stored_hash = $row['contraseña'];
+
+                    //Verificamos que sea el mismo correo y contraseña
+                    if ($correoR == $correo) {
+                        if(password_verify($passR, $stored_hash)){
+                            $nombre = $row['nombre'];
+                            $id = $row['id_user'];
+                            $_SESSION['id'] = $id;
+                            break;
+                        }
                     }
                 }
-                if ($correoR == $correo && $passR == $pass) {
-                    //echo "<h3>¡Bienvenido/a $nombre!</h3>";
-                    $pagina = "./users/index.php";
-                    header("Location: ".$pagina);
+                if ($correoR == $correo) {
+                    if (password_verify($passR,$stored_hash)) {
+                        header("Location: ./users/index.php");
+                        exit();
+                    }
                 } else{
-                    echo "<h3>Error el correo o contraseña es incorrecto</h3>";
+                    header("Location: errorLogin.php");
+                    exit();
                 }
-                
             }
         } else {
-            ?>
-            <h3>Complete los campos</h3>
-            <?php
+            header("Location: errorLogin2.php");
+            exit();
         }
     }
 ?>

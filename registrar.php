@@ -27,28 +27,29 @@
 
                 if($bandera){
                     if ($pass == $passConfirm) {
-                        $consulta = "INSERT INTO registros(nombre, apellido, correo, contraseña) VALUES ('$nombre', '$apellido','$correo','$pass')";
+                        //Encriptamos la contraseña del usuario para almacenarla a la base de datos
+                        $hashed_password = password_hash($pass, PASSWORD_DEFAULT);
+                        $consulta = "INSERT INTO registros(nombre, apellido, correo, contraseña) VALUES ('$nombre', '$apellido','$correo','$hashed_password')";
                         $resultado = mysqli_query($conex, $consulta);
                         if ($resultado) {
-                            ?>
-                            <h3>Te has registrado correctamente</h3>
-                            <?php
+                            header("Location: sucessRegistrar.php");
+                            exit();
                         }
                     }  else {
-                        ?>
-                        <h3>Las contraseñas no coinciden</h3>
-                        <?php
+                        /*Las contraseñas no coinciden*/
+                        header("Location: errorRegistrar3.php");
+                        exit();
                     }
                 } else{
-                    ?>
-                    <h3>El usuario ya existe</h3>
-                    <?php 
+                    /*El usuario ya existe*/
+                    header("Location: errorRegistrar2.php");
+                    exit();
                 }
             }
         } else {
-            ?>
-            <h3>Complete los campos</h3>
-            <?php
+            /*Completar los campos vacios*/
+            header("Location: errorRegistrar.php");
+            exit();
         }
     }
 ?>

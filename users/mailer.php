@@ -1,3 +1,24 @@
+<?php
+  session_start();
+  include("../con_bd.php");
+  $nombre;
+  $correo;
+
+  if(isset($_SESSION['id'])){
+      $id_usuario = $_SESSION['id'];
+      $consulta = "SELECT * FROM registros WHERE id_user = '$id_usuario'";
+      $resultado = mysqli_query($conex, $consulta);
+
+            if ($resultado) {
+                while ($row = $resultado -> fetch_array()) {
+                    //Obtenemos el nombre y correo del usuario que ha iniciado sesion
+                    $nombre = $row['nombre'];
+                    $correo = $row['correo'];
+                }
+            }
+  }
+?>
+
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -40,6 +61,11 @@
                 <div class="dropdown" id="dropdown-list">
                   <a class="btn btn-secondary dropdown-toggle"  role="button" data-bs-toggle="dropdown" aria-expanded="false">
                     <i class="fa-regular fa-user"></i>
+
+                    <?php
+                    echo $nombre;
+                    ?>
+
                   </a>
                   <ul class="dropdown-menu dropdown-menu-dark">
                     <li><a class="dropdown-item" href="#">Perfil</a></li>
@@ -65,23 +91,34 @@
         <form method="post" id="grilla_contacto" action="<?php echo htmlspecialchars($_SERVER['PHP_SELF']); ?>">
             <div class="contac_1">
                 <div class="form-floating">
-                  <input type="text" name="nombre" class="form-control" placeholder="name" id="nombre floatingInput" >
+                  <input type="text" readonly name="nombre" class="form-control" placeholder="name" id="nombre floatingInput" value="<?php if(!$enviado && isset($nombre)) echo $nombre?>">
                   <label for="floatingInput"><i class="bi bi-person"></i> Nombre</label>
                 </div>
             </div>
             <div class="form-floating contac_2">
-                <input type="email" name="correo" class="form-control" id="correo floatingInput" placeholder="name@example.com" >
+                <input  type="email" readonly name="correo" class="form-control" id="correo floatingInput" placeholder="name@example.com" value="<?php if(!$enviado && isset($correo)) echo $correo?>" >
                 <label for="floatingInput"><i class="bi bi-at"></i>Correo Electronico</label>
             </div>
 
             <div class="form-floating form-mensaje contac_3">
-                <textarea class="form-control" name="mensaje" placeholder="Leave a comment here" id="mensaje floatingTextarea2" style="height: 300px"></textarea>
+                <textarea class="form-control" name="mensaje" placeholder="Leave a comment here" id="mensaje floatingTextarea2" style="height: 300px"><?php if(!$enviado && isset($mensaje)) echo $mensaje?></textarea>
                 <label for="floatingTextarea2">Mensaje</label>
               </div>
               <div class="form-boton contac_4">
                 <input type="submit" value="Enviar" name="submit">
                 <input type="reset" value="Limpiar">
               </div>
+
+              <!-- Comprobar si hay errores o no  -->
+              <?php if (!empty($errores)): ?>
+                <div class="alert error" role="alert">
+              <?php echo $errores; ?>
+                </div>
+              <?php elseif($enviado) : ?>
+                <div class="alert success" role="alert">
+              <?php echo 'Enviado Correctamente'; ?>
+                </div>
+              <?php endif; ?>
               
         </form>
     </div>

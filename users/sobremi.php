@@ -1,3 +1,22 @@
+<?php
+  session_start();
+  include("../con_bd.php");
+  $nombre;
+
+  if(isset($_SESSION['id'])){
+      $id_usuario = $_SESSION['id'];
+      $consulta = "SELECT * FROM registros WHERE id_user = '$id_usuario'";
+      $resultado = mysqli_query($conex, $consulta);
+
+            if ($resultado) {
+                while ($row = $resultado -> fetch_array()) {
+                    //Obtenemos el nombre del usuario que ha iniciado sesion
+                    $nombre = $row['nombre'];
+                }
+            }
+  }
+?>
+
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -40,6 +59,11 @@
                 <div class="dropdown" id="dropdown-list">
                   <a class="btn btn-secondary dropdown-toggle"  role="button" data-bs-toggle="dropdown" aria-expanded="false">
                     <i class="fa-regular fa-user"></i>
+                    
+                    <?php
+                      echo $nombre;
+                    ?>
+
                   </a>
                   <ul class="dropdown-menu dropdown-menu-dark">
                     <li><a class="dropdown-item" href="#">Perfil</a></li>

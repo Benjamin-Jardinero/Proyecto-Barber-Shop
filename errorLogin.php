@@ -27,19 +27,23 @@
               <label for="exampleInputPassword1" class="form-label"><i class="fa-solid fa-key i-color"></i> Contraseña</label>
               <input type="password" class="form-control" id="exampleInputPassword1" placeholder="password" name="passwordRegister">
             </div>
-
+            
             <div class="mb-3 div-btn">
               <button type="submit" class="btn btn-ingresar" name="iniciarsesion">Iniciar Sesión</button>
             </div>
             <div class="mb-3 div-span">
               <p><a href="resetPassword.php">¿Has olvidado tu contraseña?</a></p>
             </div>
-            
-            
-            <div class="div-registrarse">
+            <div class="mb-3 div-registrarse">
               <span>¿No tenes cuenta?</span>
               <a href="vista2.php">Registrate!</a>
             </div>
+
+            <div class="alert alert-danger alert-dismissible fade show" role="alert">
+                <strong>Error. El correo o contraseña es incorrecto</strong> 
+                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+            </div>
+
           </form>
     </section>
 
