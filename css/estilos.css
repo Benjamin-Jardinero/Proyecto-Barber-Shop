@@ -25,6 +25,14 @@ body{
     color: #fd7e14;
     text-shadow: 2px 2px 2px rgb(255, 255, 255);
 }
+
+/* Titulo Mobile */
+@media(max-width: 480px){
+    .titulo{
+        font-size: 2.3rem;
+    }
+}
+
 .seccion-container{
     background-color: rgb(15,16,14,0.3);
     border-radius: 20px;
@@ -32,12 +40,27 @@ body{
     padding: 20px;
     width: 50%;
 }
+
+/* Seccion Login Mobile */
+@media(max-width: 810px){
+    .seccion-container{
+        width: 100%;
+    }
+}
+
 .div-correo label, .div-password label, .div-name label, h3{
     font-size: 2rem;
     font-family: cursive;
     color:white;
     text-shadow: 2px 2px 2px #fd7e14;
 }
+/* Label Mobile */
+@media(max-width: 505px){
+    .div-correo label, .div-password label, .div-name label, h3{
+        font-size: 1.3rem;
+    }
+}
+
 span{
     color: aliceblue;
 }

@@ -14,6 +14,8 @@
                     $nombre = $row['nombre'];
                 }
             }
+  }else{
+    header("Location: ../vista.php");
   }
 ?>
 

@@ -16,6 +16,8 @@
                     $correo = $row['correo'];
                 }
             }
+  }else{
+    header("Location: ../vista.php");
   }
 ?>
 
@@ -89,12 +91,11 @@
       </div>
       
         <form method="post" id="grilla_contacto" action="<?php echo htmlspecialchars($_SERVER['PHP_SELF']); ?>">
-            <div class="contac_1">
-                <div class="form-floating">
-                  <input type="text" readonly name="nombre" class="form-control" placeholder="name" id="nombre floatingInput" value="<?php if(!$enviado && isset($nombre)) echo $nombre?>">
-                  <label for="floatingInput"><i class="bi bi-person"></i> Nombre</label>
-                </div>
+            <div class="form-floating contac_1">
+                <input type="text" readonly name="nombre" class="form-control" placeholder="name" id="nombre floatingInput" value="<?php if(!$enviado && isset($nombre)) echo $nombre?>">
+                <label for="floatingInput"><i class="bi bi-person"></i> Nombre</label>
             </div>
+            
             <div class="form-floating contac_2">
                 <input  type="email" readonly name="correo" class="form-control" id="correo floatingInput" placeholder="name@example.com" value="<?php if(!$enviado && isset($correo)) echo $correo?>" >
                 <label for="floatingInput"><i class="bi bi-at"></i>Correo Electronico</label>

@@ -7,6 +7,8 @@
   $apellido;
   $correo;
   $id_user;
+  $nTelefono;
+  $parrafo;
 
   if(isset($_SESSION['id'])){
       $id_usuario = $_SESSION['id'];
@@ -20,8 +22,12 @@
                     $apellido = $row['apellido'];
                     $id_user = $row['id_user'];
                     $correo = $row['correo'];
+                    $nTelefono = $row['telefono'];
+                    $parrafo = $row['parrafo'];
                 }
             }
+  }else{
+    header("Location: ../vista.php");
   }
 ?>
 
@@ -91,11 +97,12 @@
             <img src="../img/usuario.png" class="card-img-top" alt="Usuario">
             <div class="card-body">
                 <h5 class="card-title" style="text-align: center;"><?php echo $nombre." ".$apellido?></h5>
-                <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit odio dolor aut quis esse suscipit, mollitia velit alias possimus aperiam deserunt cumque corrupti molestias enim ea exercitationem! Suscipit, quos perferendis?</p>
+                <p class="card-text"><strong>Descripcion:</strong> <?php echo $parrafo?></p>
             </div>
             <ul class="list-group list-group-flush">
-                <li class="list-group-item"><?php echo $correo?></li>
-                <li class="list-group-item">Nro de usuario: <?php echo $id_user?></li>
+                <li class="list-group-item"><strong>Correo: </strong><?php echo $correo?></li>
+                <li class="list-group-item"><strong>Celular: </strong><?php echo $nTelefono?></li>
+                <li class="list-group-item"><strong>Nº de usuario: </strong><?php echo $id_user?></li>
             </ul>
             <div class="card-body" style="text-align: center;">
                 <a href="editarPerfil.php" class="card-link">Editar Perfil</a>

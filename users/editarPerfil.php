@@ -7,6 +7,8 @@
   $apellido;
   $correo;
   $id_user;
+  $nTelefono;
+  $parrafo;
 
   if(isset($_SESSION['id'])){
       $id_usuario = $_SESSION['id'];
@@ -20,8 +22,12 @@
                     $apellido = $row['apellido'];
                     $id_user = $row['id_user'];
                     $correo = $row['correo'];
+                    $nTelefono = $row['telefono'];
+                    $parrafo = $row['parrafo'];
                 }
             }
+  }else{
+    header("Location: ../vista.php");
   }
 ?>
 
@@ -90,18 +96,21 @@
         <div class="card" style="width: 50%; margin: auto;">
             <img src="../img/usuario.png" class="card-img-top" alt="Usuario">
             <div class="card-body">
-                <h5 class="card-title">Nombre: </h5>
-                <input type="email" class="form-control" style="text-align: center;" id="exampleInputEmail1" aria-describedby="emailHelp" value="<?php echo $nombre?>">
-                <h5 class="card-title">Apellido: </h5>
-                <input type="email" class="form-control" style="text-align: center;" id="exampleInputEmail1" aria-describedby="emailHelp" value="<?php echo $apellido?>">
-                <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit odio dolor aut quis esse suscipit, mollitia velit alias possimus aperiam deserunt cumque corrupti molestias enim ea exercitationem! Suscipit, quos perferendis?</p>
+                <input type="text" class="form-control mb-3" style="text-align: center;" value="<?php echo $nombre?>">
+                <input type="text" class="form-control mb-3" style="text-align: center;" value="<?php echo $apellido?>">
+                <input type="text" class="form-control" id="exampleFormControlInput1" value="<?php echo $parrafo?>" placeholder="Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem inventore totam, corporis consequatur error vel alias eum quaerat dicta nesciunt recusandae, voluptate voluptatum tempore ea fuga? Tempore quas pariatur necessitatibus!">
             </div>
-            <ul class="list-group list-group-flush">
-                <li class="list-group-item"><?php echo $correo?></li>
-                <li class="list-group-item">Nro de usuario: <?php echo $id_user?></li>
-            </ul>
+            <div class="card-body">
+              <ul class="list-group list-group-flush">
+                  <input type="email" class="form-control mb-3" id="exampleFormControlInput1" value="<?php echo $correo?>">
+                  <input type="text" class="form-control mb-3" id="exampleFormControlInput1" value="<?php echo $nTelefono?>" placeholder="1122223333">
+                  <li class="list-group-item">Nro de usuario: <?php echo $id_user?></li>
+              </ul>
+            </div>
+
             <div class="card-body" style="text-align: center;">
-                <a href="#" class="card-link">Editar Perfil</a>
+                <a href="#" class="card-link">Guardar Cambios</a>
+                <a href="perfil.php" class="card-link">Volver</a>
             </div>
         </div>
     </section>

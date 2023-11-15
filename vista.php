@@ -32,7 +32,7 @@
               <button type="submit" class="btn btn-ingresar" name="iniciarsesion">Iniciar Sesión</button>
             </div>
             <div class="mb-3 div-span">
-              <p><a href="resetPassword.php">¿Has olvidado tu contraseña?</a></p>
+              <p><a href="resetVista.php">¿Has olvidado tu contraseña?</a></p>
             </div>
             
             

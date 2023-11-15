@@ -1,3 +1,26 @@
+<?php
+
+include("con_bd.php");
+session_start();
+$correoVerificar;
+
+if(isset($_SESSION['correo'])){
+  $mail = $_SESSION['correo'];
+  $consulta = "SELECT * FROM registros WHERE correo = '$mail'";
+  $resultado = mysqli_query($conex, $consulta);
+
+      if ($resultado) {
+        while ($row = $resultado -> fetch_array()) {
+          //Obtenemos el correo del usuario que ha pedido cambiar su contraseña
+          $correoVerificar = $row['correo'];
+        }
+      }
+} else{
+	  header("vista.php");
+}
+
+?>
+
 <!doctype html>
 <html lang="en">
   <head>
@@ -17,11 +40,6 @@
 
     <section class="container seccion-container">
         <form method="post" action="<?php echo htmlspecialchars($_SERVER['PHP_SELF']); ?>">
-
-            <div class="mb-3 div-correo">
-              <label for="exampleInputEmail1" class="form-label"><i class="fa-solid fa-envelope i-color"></i> Correo Electronico</label>
-              <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="name@gmail.com" name="correoReset2">
-            </div>
 
             <div class="mb-3 div-password">
               <label for="exampleInputPassword1" class="form-label"><i class="fa-solid fa-key i-color"></i> Contraseña nueva</label>

@@ -415,8 +415,6 @@ a:hover {
 .contacto-fondo {
   background-image: url(https://img.freepik.com/vector-premium/barberia-barber-shop-signo-senalizacion_2699-96.jpg?w=2000);
   background-size: cover;
-  height: 1200px;
-  width: 100%;
   margin: 20px auto;
 }
 
@@ -431,10 +429,17 @@ a:hover {
   margin: 20px 5px;
 }
 
+.contacto-fondo form .form-boton {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+}
+
 .contacto-fondo form .form-boton input {
   border: 2px solid white;
-  margin: 20px 0;
-  width: 250px;
+  margin: 20px 8px;
+  width: 50%;
   height: 60px;
   background-color: black;
   color: #fd7e14;
@@ -448,9 +453,15 @@ a:hover {
   border: 2px solid black;
 }
 
+@media (max-width: 400px) {
+  .contacto-titulo h1 {
+    font-size: 4rem;
+  }
+}
+
 @media (max-width: 768px) {
-  .contacto-fondo form .form-mensaje {
-    width: 97%;
+  .contacto-fondo form {
+    width: 100%;
   }
 }
 /*# sourceMappingURL=style.css.map */
