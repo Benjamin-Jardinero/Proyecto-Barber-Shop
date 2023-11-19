@@ -3,6 +3,12 @@
 // if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 // 	echo "Se enviaron por POST";
 // }
+use PHPMailer\PHPMailer\PHPMailer;
+use PHPMailer\PHPMailer\Exception;
+
+require '../PHPMailer/src/Exception.php';
+require '../PHPMailer/src/PHPMailer.php';
+require '../PHPMailer/src/SMTP.php';
 
 $errores = '';
 $enviado = '';
@@ -12,9 +18,10 @@ if (isset($_POST['submit'])) {
 	$nombre = $_POST['nombre'];
 	$correo = $_POST['correo'];
 	$mensaje = $_POST['mensaje'];
-	$header = "From: noreply@example.com" . "\r\n";
-	$header .= "Reply-To: noreply@example.com" . "\r\n";
-	$header .= "X-Mailer: PHP/". phpversion();
+	
+	//$header = "From: noreply@example.com" . "\r\n";
+	//$header .= "Reply-To: noreply@example.com" . "\r\n";
+	//$header .= "X-Mailer: PHP/". phpversion();
 
 // Comprobamos que el nombre no este vacio.
 	if (!empty($nombre)) {
@@ -52,14 +59,42 @@ if (isset($_POST['submit'])) {
 // Comprobamos si hay errores, si no hay entonces enviamos.
 	
 
-	if (!$errores) {
-		$enviar_a = "benjaminlazarte123@gmail.com";
-		$asunto = 'Consulta por Barber Shop';
-		$mensaje = $_POST['mensaje'];
-		$mensaje .= "Enviado desde: " . $correo;
+	// if (!$errores) {
+	// 	$enviar_a = "benjaminlazarte123@gmail.com";
+	// 	$asunto = 'Consulta por Barber Shop';
+	// 	$mensaje = $_POST['mensaje'];
+	// 	$mensaje .= "Enviado desde: " . $correo;
 
-		$email = @mail($enviar_a, $asunto, $mensaje, $header);
-		$enviado = 'true';
+	// 	$email = @mail($enviar_a, $asunto, $mensaje, $header);
+	// 	$enviado = 'true';
+	// }
+	if(!$errores){
+		$mail = new PHPMailer(true);
+
+		try {
+			// Configuración del servidor SMTP
+			$mail->SMTPDebug = 0;
+			$mail->isSMTP();
+			$mail->Host = 'smtp.office365.com';
+			$mail->SMTPAuth = true;
+			$mail->Username = '42027184@itbeltran.com.ar'; //correo del usuario en gmail
+			$mail->Password = 'Enzoperez24'; //contraseña del gmail
+			$mail->SMTPSecure = 'tls'; // Puedes usar 'tls o ssl' también dependiendo de la configuración de tu servidor
+			$mail->Port = 587; // Cambia esto según la configuración de tu servidor 587 o 465
+
+			// Configuración del correo electrónico
+			$mail->setFrom('42027184@itbeltran.com.ar', 'Barber Shop');
+			$mail->addAddress("benjaminlazarte123@gmail.com", "Benja");
+			$mail->isHTML(true);
+			$mail->Subject = 'Consulta por contacto de Barber Shop';
+			$mail->Body = $mensaje;
+
+			// Enviar el correo
+			$mail->send();
+			$enviado = 'true';
+		} catch (Exception $e) {
+			echo "Error al enviar el correo: {$mail->ErrorInfo}";
+		}
 	}
 }
 require("mailer.php");

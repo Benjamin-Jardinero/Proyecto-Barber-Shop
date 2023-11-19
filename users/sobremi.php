@@ -68,7 +68,7 @@
 
                   </a>
                   <ul class="dropdown-menu dropdown-menu-dark">
-                    <li><a class="dropdown-item" href="#">Perfil</a></li>
+                    <li><a class="dropdown-item" href="perfil.php">Perfil</a></li>
                     <li><a class="dropdown-item" href="#">Ayuda</a></li>
                     <li><a class="dropdown-item" href="../cerrarsesion.php">Cerrar sesión</a></li>
                   </ul>

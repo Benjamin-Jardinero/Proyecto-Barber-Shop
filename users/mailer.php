@@ -70,7 +70,7 @@
 
                   </a>
                   <ul class="dropdown-menu dropdown-menu-dark">
-                    <li><a class="dropdown-item" href="#">Perfil</a></li>
+                    <li><a class="dropdown-item" href="perfil.php">Perfil</a></li>
                     <li><a class="dropdown-item" href="#">Ayuda</a></li>
                     <li><a class="dropdown-item" href="../cerrarsesion.php">Cerrar sesión</a></li>
                   </ul>
@@ -110,14 +110,11 @@
                 <input type="reset" value="Limpiar">
               </div>
 
-              <!-- Comprobar si hay errores o no  -->
-              <?php if (!empty($errores)): ?>
-                <div class="alert error" role="alert">
-              <?php echo $errores; ?>
-                </div>
-              <?php elseif($enviado) : ?>
-                <div class="alert success" role="alert">
-              <?php echo 'Enviado Correctamente'; ?>
+              <!-- Comprobar si envia o no  -->
+              <?php if($enviado) : ?>
+                <div class="alert alert-success alert-dismissible fade show" role="alert">
+                  <strong class="strong-titulo">Se ha enviado el correo exitosamente</strong> 
+                  <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
                 </div>
               <?php endif; ?>
               

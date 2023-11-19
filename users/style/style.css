@@ -420,6 +420,7 @@ a:hover {
 
 .contacto-fondo form {
   width: 60%;
+  height: 100vh;
   padding: 25px;
   margin: auto;
 }

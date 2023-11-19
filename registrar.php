@@ -15,23 +15,27 @@
             //Comprobar que el correo no exista, para crearlo
             $consulta = "SELECT * FROM registros";
             $resultado = mysqli_query($conex, $consulta);
+            //$resultado = $conex -> query($consulta);
             $bandera = true;
-
-            if ($resultado){
+            //verificar si hay registros
+            //if ($resultado -> num_rows > 0){
+            if($resultado){
+                //while($row = $resultado -> fetch_assoc()){
                 while($row = $resultado -> fetch_array()){
                     $correoRegistros = $row['correo'];
                     if ($correo == $correoRegistros ) {
                         $bandera = false;
                     }
                 }
-
+                //$conex -> close();
                 if($bandera){
                     if ($pass == $passConfirm) {
                         //Encriptamos la contraseña del usuario para almacenarla a la base de datos
                         $hashed_password = password_hash($pass, PASSWORD_DEFAULT);
                         $consulta = "INSERT INTO registros(nombre, apellido, correo, contraseña) VALUES ('$nombre', '$apellido','$correo','$hashed_password')";
                         $resultado = mysqli_query($conex, $consulta);
-                        if ($resultado) {
+                        if($resultado){
+                        //if ($conex -> query($consulta)=== true) {
                             header("Location: sucessRegistrar.php");
                             exit();
                         }

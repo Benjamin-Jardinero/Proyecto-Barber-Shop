@@ -77,7 +77,7 @@
                     ?>
                   </a>
                   <ul class="dropdown-menu dropdown-menu-dark">
-                    <li><a class="dropdown-item" href="#">Perfil</a></li>
+                    <li><a class="dropdown-item" href="perfil.php">Perfil</a></li>
                     <li><a class="dropdown-item" href="#">Ayuda</a></li>
                     <li><a class="dropdown-item" href="../cerrarsesion.php">Cerrar sesión</a></li>
                   </ul>
@@ -97,15 +97,13 @@
             <img src="../img/usuario.png" class="card-img-top" alt="Usuario">
             <div class="card-body">
                 <h5 class="card-title" style="text-align: center;"><?php echo $nombre." ".$apellido?></h5>
-                <p class="card-text"><strong>Descripcion:</strong> <?php echo $parrafo?></p>
             </div>
             <ul class="list-group list-group-flush">
                 <li class="list-group-item"><strong>Correo: </strong><?php echo $correo?></li>
-                <li class="list-group-item"><strong>Celular: </strong><?php echo $nTelefono?></li>
                 <li class="list-group-item"><strong>Nº de usuario: </strong><?php echo $id_user?></li>
             </ul>
             <div class="card-body" style="text-align: center;">
-                <a href="editarPerfil.php" class="card-link">Editar Perfil</a>
+                <a href="index.php" class="card-link">Volver</a>
             </div>
         </div>
     </section>
