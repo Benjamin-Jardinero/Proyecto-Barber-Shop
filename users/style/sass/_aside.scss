@@ -42,33 +42,22 @@ $orange-500: #fd7e14;
     width: 100%;
     grid-area: moderno;
 }
-.cortes__modernos:hover{
-    border: 2px solid $orange-500;
-}
 .cortes__clasicos{
     width: 100%;
     grid-area: clasico;
     display: flex;
-}
-.cortes__clasicos:hover{
-    border: 2px solid $orange-500;
 }
 .cortes__niños{
     width: 100%;
     grid-area: niños;
     display: flex;   
 }
-.cortes__niños:hover{
-    border: 2px solid $orange-500;
-}
 .cortes__estilistas{
     width: 100%;
     grid-area: estilista;
     display: flex;
 }
-.cortes__estilistas:hover{
-    border: 2px solid $orange-500;
-}
+
 @media (max-width:480px){
     #grilla__aside--principal{
         grid-template-areas: 

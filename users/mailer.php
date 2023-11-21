@@ -58,24 +58,19 @@
                    <li class="nav-item">
                     <a class="nav-link" href="contacto.php">Contacto</a>
                   </li>
+                  <li class="nav-item dropdown" id="dropdown-list">
+                      <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        Yo
+                      </a>
+                      <ul class="dropdown-menu dropdown-menu-dark">
+                        <li><a href="perfil.php"><i class="fa-regular fa-user"></i> Perfil</a></li>
+                        <li><a href="#"><i class="fa-solid fa-circle-info"></i> Ayuda</a></li>
+                        <li><a href="../cerrarsesion.php"><i class="fa-solid fa-circle-xmark"></i> Cerrar sesión</a></li>
+                      </ul>
+                  </li>
                 </ul>
 
-                <div class="dropdown" id="dropdown-list">
-                  <a class="btn btn-secondary dropdown-toggle"  role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                    <i class="fa-regular fa-user"></i>
-
-                    <?php
-                    echo $nombre;
-                    ?>
-
-                  </a>
-                  <ul class="dropdown-menu dropdown-menu-dark">
-                    <li><a class="dropdown-item" href="perfil.php">Perfil</a></li>
-                    <li><a class="dropdown-item" href="#">Ayuda</a></li>
-                    <li><a class="dropdown-item" href="../cerrarsesion.php">Cerrar sesión</a></li>
-                  </ul>
-                </div>
-
+                
                 <form class="d-flex">
                     <input class="form-control me-2" type="search" placeholder="Buscar" aria-label="Search">
                     <button class="btn btn-outline-light" type="submit">Search</button>
@@ -89,7 +84,9 @@
       <div class="contacto-titulo">
         <h1>Contacto</h1>
       </div>
-      
+      <div class="img-contacto">
+        <img src="img/contacto-logo.jpg" alt="logo-imagen">
+      </div>
         <form method="post" id="grilla_contacto" action="<?php echo htmlspecialchars($_SERVER['PHP_SELF']); ?>">
             <div class="form-floating contac_1">
                 <input type="text" readonly name="nombre" class="form-control" placeholder="name" id="nombre floatingInput" value="<?php if(!$enviado && isset($nombre)) echo $nombre?>">
@@ -105,7 +102,8 @@
                 <textarea class="form-control" name="mensaje" placeholder="Leave a comment here" id="mensaje floatingTextarea2" style="height: 300px"><?php if(!$enviado && isset($mensaje)) echo $mensaje?></textarea>
                 <label for="floatingTextarea2">Mensaje</label>
               </div>
-              <div class="form-boton contac_4">
+            
+              <div class="form-floating form-boton contac_4">
                 <input type="submit" value="Enviar" name="submit">
                 <input type="reset" value="Limpiar">
               </div>
@@ -125,7 +123,7 @@
 <footer class="bg-dark footer-redes">
   <div class="footer__div--redes">
       <ul>
-        <li><a href="#"><i class="fa-brands fa-whatsapp"></i><span> Whatsapp</span></a></li>
+        <li><a href="https://api.whatsapp.com/send?phone=541127088361"><i class="fa-brands fa-whatsapp"></i><span> Whatsapp</span></a></li>
         <li><a href="https://www.facebook.com/BenjaCARP2"><i class="fa-brands fa-facebook-square"></i><span> Facebook</span></a></li>
         <li><a href="https://www.instagram.com/benja_laza"><i class="fa-brands fa-instagram"></i><span> Instagram</span></a></li>
         <li><a href="https://twitter.com/BenjaLaza1"><i class="fa-brands fa-twitter"></i><span> Twitter</span></a></li>

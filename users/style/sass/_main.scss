@@ -1,34 +1,46 @@
 $orange-500: #fd7e14;
 
 .contacto-titulo{
-    color: white;
-    text-shadow: 2px 2px 2px #fd7e14;
+    display: flex;
+    justify-content: center;
+    color: $orange-500;
+    text-shadow: 2px 2px 2px #000000;
     font-family: monospace;
     
     h1{
-        text-align: center;
-        font-size: 5rem;
+        font-size: 4.5rem;
     }
 }
 .contacto-fondo{
-    background-image: url(https://img.freepik.com/vector-premium/barberia-barber-shop-signo-senalizacion_2699-96.jpg?w=2000);
+    background-image: url("https://2356021.fs1.hubspotusercontent-na1.net/hubfs/2356021/material%20para%20barberia.jfif");
     background-size: cover;
     margin: 20px auto;
+    border-radius: 1%;
+    .img-contacto{
+        margin-left: auto;
+        margin-right: auto;
+        width: 225px;
+        height: 225px;
+        img{
+            width: 100%;
+            border: 2px solid white;
+            border-radius: 20%;
+        }
+    }
     form{
         width: 60%;
         height: 100vh;
         padding: 25px;
         margin: auto;
         div{
-            text-align: center;
-            margin: 20px 5px;
+            margin: 20px auto;
         }
         .form-boton{
             display: flex;
             width: 100%;
             input{
                 border: 2px solid white;
-                margin: 20px 8px;
+                margin: 5px;
                 width: 50%;
                 height: 60px;
                 background-color: black;
@@ -41,8 +53,7 @@ $orange-500: #fd7e14;
             color: white;
             border: 2px solid black;
         }
-        }
-        
+        }    
     }
 }
 @media(max-width: 400px){

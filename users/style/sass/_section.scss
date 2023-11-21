@@ -24,6 +24,14 @@ $orange-500: #fd7e14;
             color: #000;
         }
 
+@media(max-width: 480px){
+    .div-img{
+        img{
+            height: 550px;
+        }
+    }
+}
+
 /*SECTION / TIENDA*/
 .carusel-border{
     border-radius: 10px;
@@ -84,10 +92,10 @@ $orange-500: #fd7e14;
 .titulo-sobremi{
     h2{
         left: 0;
-        font-size: 2rem;
+        font-size: 2.3rem;
         font-family: monospace;
-        color: white;
-        text-shadow: 2px 2px 2px $orange-500;
+        color: $orange-500;
+        text-shadow: 2px 2px 2px black;
     }
 }
 .img-sobremi{
@@ -99,7 +107,6 @@ $orange-500: #fd7e14;
         border: 2.5px solid $orange-500;
         border-radius: 50%;
     }
-    
 }
 .parrafo-sobremi{
     margin: 20px 0;
@@ -142,5 +149,28 @@ $orange-500: #fd7e14;
         a{
             color: #fd7e14;
         }
+    }
+}
+
+//SECCION PERFIL
+.titulo-perfil{
+    h5{
+        font-family: cursive;
+        font-size: 1.5rem;
+        color: black;
+    }
+}
+.volver{
+    a{
+        background-color: white;
+        color: rgb(0, 0, 0);
+        padding: 10px;
+        font-family: cursive;
+        text-decoration: none;
+        border-radius: 10%;
+    }
+    a:hover{
+        background-color: rgb(62, 62, 62);
+        color: rgb(255, 255, 255);
     }
 }

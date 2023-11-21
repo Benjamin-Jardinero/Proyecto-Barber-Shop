@@ -56,23 +56,18 @@
                    <li class="nav-item">
                     <a class="nav-link" href="contacto.php">Contacto</a>
                   </li>
+                  <li class="nav-item dropdown" id="dropdown-list">
+                      <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        Yo
+                      </a>
+                      <ul class="dropdown-menu dropdown-menu-dark">
+                        <li><a href="perfil.php"><i class="fa-regular fa-user"></i> Perfil</a></li>
+                        <li><a href="#"><i class="fa-solid fa-circle-info"></i> Ayuda</a></li>
+                        <li><a href="../cerrarsesion.php"><i class="fa-solid fa-circle-xmark"></i> Cerrar sesión</a></li>
+                      </ul>
+                  </li>
                 </ul>
                 
-                <div class="dropdown" id="dropdown-list">
-                  <a class="btn btn-secondary dropdown-toggle"  role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                    <i class="fa-regular fa-user"></i>
-                    
-                    <?php
-                      echo $nombre;
-                    ?>
-
-                  </a>
-                  <ul class="dropdown-menu dropdown-menu-dark">
-                    <li><a class="dropdown-item" href="perfil.php">Perfil</a></li>
-                    <li><a class="dropdown-item" href="#">Ayuda</a></li>
-                    <li><a class="dropdown-item" href="../cerrarsesion.php">Cerrar sesión</a></li>
-                  </ul>
-                </div>
 
                 <form class="d-flex">
                     <input class="form-control me-2" type="search" placeholder="Buscar" aria-label="Search">
@@ -110,7 +105,7 @@
 <footer class="bg-dark footer-redes">
     <div class="footer__div--redes">
         <ul>
-          <li><a href="#"><i class="fa-brands fa-whatsapp"></i><span> Whatsapp</span></a></li>
+          <li><a href="https://api.whatsapp.com/send?phone=541127088361"><i class="fa-brands fa-whatsapp"></i><span> Whatsapp</span></a></li>
           <li><a href="https://www.facebook.com/BenjaCARP2"><i class="fa-brands fa-facebook-square"></i><span> Facebook</span></a></li>
           <li><a href="https://www.instagram.com/benja_laza"><i class="fa-brands fa-instagram"></i><span> Instagram</span></a></li>
           <li><a href="https://twitter.com/BenjaLaza1"><i class="fa-brands fa-twitter"></i><span> Twitter</span></a></li>

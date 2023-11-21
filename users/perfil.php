@@ -67,21 +67,18 @@
                    <li class="nav-item">
                     <a class="nav-link" href="contacto.php">Contacto</a>
                   </li>
+                  <li class="nav-item dropdown" id="dropdown-list">
+                      <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        Yo
+                      </a>
+                      <ul class="dropdown-menu dropdown-menu-dark">
+                        <li><a href="perfil.php"><i class="fa-regular fa-user"></i> Perfil</a></li>
+                        <li><a href="#"><i class="fa-solid fa-circle-info"></i> Ayuda</a></li>
+                        <li><a href="../cerrarsesion.php"><i class="fa-solid fa-circle-xmark"></i> Cerrar sesión</a></li>
+                      </ul>
+                  </li>
                 </ul>
                 
-                <div class="dropdown" id="dropdown-list">
-                  <a class="btn btn-secondary dropdown-toggle"  role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                    <i class="fa-regular fa-user"></i>
-                    <?php
-                        echo $nombre;
-                    ?>
-                  </a>
-                  <ul class="dropdown-menu dropdown-menu-dark">
-                    <li><a class="dropdown-item" href="perfil.php">Perfil</a></li>
-                    <li><a class="dropdown-item" href="#">Ayuda</a></li>
-                    <li><a class="dropdown-item" href="../cerrarsesion.php">Cerrar sesión</a></li>
-                  </ul>
-                </div>
 
                 <form class="d-flex">
                     <input class="form-control me-2" type="search" placeholder="Buscar" aria-label="Search">
@@ -93,16 +90,16 @@
     </header>
 <!-- SECCION / PERFIL -->
     <section class="container mb-3">
-        <div class="card" style="width: 50%; margin: auto;">
+        <div class="card" style="width:100%; margin: auto;">
             <img src="../img/usuario.png" class="card-img-top" alt="Usuario">
-            <div class="card-body">
+            <div class="card-body titulo-perfil">
                 <h5 class="card-title" style="text-align: center;"><?php echo $nombre." ".$apellido?></h5>
             </div>
             <ul class="list-group list-group-flush">
                 <li class="list-group-item"><strong>Correo: </strong><?php echo $correo?></li>
                 <li class="list-group-item"><strong>Nº de usuario: </strong><?php echo $id_user?></li>
             </ul>
-            <div class="card-body" style="text-align: center;">
+            <div class="card-body volver" style="text-align: center;">
                 <a href="index.php" class="card-link">Volver</a>
             </div>
         </div>
@@ -111,7 +108,7 @@
     <footer class="bg-dark footer-redes">
       <div class="footer__div--redes">
         <ul>
-          <li><a href="#"><i class="fa-brands fa-whatsapp"></i><span> Whatsapp</span></a></li>
+          <li><a href="https://api.whatsapp.com/send?phone=541127088361"><i class="fa-brands fa-whatsapp"></i><span> Whatsapp</span></a></li>
           <li><a href="https://www.facebook.com/BenjaCARP2"><i class="fa-brands fa-facebook-square"></i><span> Facebook</span></a></li>
           <li><a href="https://www.instagram.com/benja_laza"><i class="fa-brands fa-instagram"></i><span> Instagram</span></a></li>
           <li><a href="https://twitter.com/BenjaLaza1"><i class="fa-brands fa-twitter"></i><span> Twitter</span></a></li>

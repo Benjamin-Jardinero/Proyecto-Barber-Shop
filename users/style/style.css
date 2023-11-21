@@ -17,8 +17,8 @@
 
 .header__item ul li {
   margin: 0 10px;
-  background-color: #fd7e14;
-  border: 2px solid rgba(0, 0, 0, 0.193);
+  background-color: #fd7e14 !important;
+  border: 2px solid rgba(0, 0, 0, 0.193) !important;
   border-radius: 0 20px 0 20px;
 }
 
@@ -29,33 +29,22 @@
 }
 
 .header__item ul li:hover {
-  background-color: rgba(255, 123, 0, 0.346);
+  background-color: rgba(255, 123, 0, 0.346) !important;
 }
 
 .header__item ul li:hover a {
   color: beige !important;
 }
 
-#dropdown-list {
-  margin: auto 5px;
+#dropdown-list li {
+  margin: 5px 10px;
+  width: 200px;
 }
 
-#dropdown-list li a {
+#dropdown-list a {
   font-size: 1.5rem;
-  color: white !important;
-  margin: 0 5px;
-}
-
-#dropdown-list li:hover {
-  background-color: rgba(255, 123, 0, 0.346) !important;
-  margin: 0 10px;
-}
-
-#dropdown-list li:hover a {
-  border-radius: 0 20px 0 20px;
-  border: 2px solid rgba(0, 0, 0, 0.193);
-  background-color: rgba(255, 123, 0, 0.346) !important;
-  color: white !important;
+  padding: 5px;
+  text-decoration: none;
 }
 
 .section__inicio .div-img {
@@ -81,6 +70,12 @@
 
 a:hover {
   color: #000;
+}
+
+@media (max-width: 480px) {
+  .div-img img {
+    height: 550px;
+  }
 }
 
 /*SECTION / TIENDA*/
@@ -151,10 +146,10 @@ a:hover {
 /*SECTION / SOBRE MÍ*/
 .titulo-sobremi h2 {
   left: 0;
-  font-size: 2rem;
+  font-size: 2.3rem;
   font-family: monospace;
-  color: white;
-  text-shadow: 2px 2px 2px #fd7e14;
+  color: #fd7e14;
+  text-shadow: 2px 2px 2px black;
 }
 
 .img-sobremi {
@@ -219,6 +214,26 @@ a:hover {
   color: #fd7e14;
 }
 
+.titulo-perfil h5 {
+  font-family: cursive;
+  font-size: 1.5rem;
+  color: black;
+}
+
+.volver a {
+  background-color: white;
+  color: black;
+  padding: 10px;
+  font-family: cursive;
+  text-decoration: none;
+  border-radius: 10%;
+}
+
+.volver a:hover {
+  background-color: #3e3e3e;
+  color: white;
+}
+
 #grilla__aside--principal {
   display: -ms-grid;
   display: grid;
@@ -270,10 +285,6 @@ a:hover {
   grid-area: moderno;
 }
 
-.cortes__modernos:hover {
-  border: 2px solid #fd7e14;
-}
-
 .cortes__clasicos {
   width: 100%;
   -ms-grid-row: 1;
@@ -283,10 +294,6 @@ a:hover {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-}
-
-.cortes__clasicos:hover {
-  border: 2px solid #fd7e14;
 }
 
 .cortes__niños {
@@ -300,10 +307,6 @@ a:hover {
   display: flex;
 }
 
-.cortes__niños:hover {
-  border: 2px solid #fd7e14;
-}
-
 .cortes__estilistas {
   width: 100%;
   -ms-grid-row: 3;
@@ -313,10 +316,6 @@ a:hover {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-}
-
-.cortes__estilistas:hover {
-  border: 2px solid #fd7e14;
 }
 
 @media (max-width: 480px) {
@@ -402,20 +401,39 @@ a:hover {
 }
 
 .contacto-titulo {
-  color: white;
-  text-shadow: 2px 2px 2px #fd7e14;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  color: #fd7e14;
+  text-shadow: 2px 2px 2px #000000;
   font-family: monospace;
 }
 
 .contacto-titulo h1 {
-  text-align: center;
-  font-size: 5rem;
+  font-size: 4.5rem;
 }
 
 .contacto-fondo {
-  background-image: url(https://img.freepik.com/vector-premium/barberia-barber-shop-signo-senalizacion_2699-96.jpg?w=2000);
+  background-image: url("https://2356021.fs1.hubspotusercontent-na1.net/hubfs/2356021/material%20para%20barberia.jfif");
   background-size: cover;
   margin: 20px auto;
+  border-radius: 1%;
+}
+
+.contacto-fondo .img-contacto {
+  margin-left: auto;
+  margin-right: auto;
+  width: 225px;
+  height: 225px;
+}
+
+.contacto-fondo .img-contacto img {
+  width: 100%;
+  border: 2px solid white;
+  border-radius: 20%;
 }
 
 .contacto-fondo form {
@@ -426,8 +444,7 @@ a:hover {
 }
 
 .contacto-fondo form div {
-  text-align: center;
-  margin: 20px 5px;
+  margin: 20px auto;
 }
 
 .contacto-fondo form .form-boton {
@@ -439,7 +456,7 @@ a:hover {
 
 .contacto-fondo form .form-boton input {
   border: 2px solid white;
-  margin: 20px 8px;
+  margin: 5px;
   width: 50%;
   height: 60px;
   background-color: black;
