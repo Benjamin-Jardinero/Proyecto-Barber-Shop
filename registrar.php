@@ -1,6 +1,11 @@
 <?php
     include("con_bd.php");
     
+    $registroOk = "";
+    $registroExiste = "";
+    $registroNoCoincide = "";
+    $registroIncompleto = "";
+
     if (isset($_POST['registrar'])) {
         if (strlen($_POST['nombre']) > 1 && strlen($_POST['apellido'] > 1) &&
             strlen($_POST['correo']) > 1 && strlen($_POST['password']) > 1 &&
@@ -36,24 +41,22 @@
                         $resultado = mysqli_query($conex, $consulta);
                         if($resultado){
                         //if ($conex -> query($consulta)=== true) {
-                            header("Location: sucessRegistrar.php");
-                            exit();
+                            $registroOk = 'true';
                         }
                     }  else {
                         /*Las contraseñas no coinciden*/
-                        header("Location: errorRegistrar3.php");
-                        exit();
+                        $registroNoCoincide = 'true';
                     }
                 } else{
                     /*El usuario ya existe*/
-                    header("Location: errorRegistrar2.php");
-                    exit();
+                    $registroExiste = 'true';
                 }
             }
         } else {
             /*Completar los campos vacios*/
-            header("Location: errorRegistrar.php");
-            exit();
+            $registroIncompleto = 'true';
         }
     }
+
+    include("registrarVista.php");
 ?>

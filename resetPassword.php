@@ -33,7 +33,7 @@ if (isset($_POST['resetPassword'])) {
 				  }
 			  }
 	} else{
-	  header("Location: vista.php");
+	  header("Location: index.php");
 	}
 
 	//$header = "From: noreply@example.com" . "\r\n";
@@ -98,15 +98,16 @@ if (isset($_POST['resetPassword'])) {
 			$mail->addAddress($correoVerificar, $nombreUser);
 			$mail->isHTML(true);
 			$mail->Subject = 'Restaurar Password';
-			$mail->Body = 'Para restaurar la contraseña dirijase a: http://localhost/proyectoBarber/resetContraVista.php';
+			$mail->Body = 'Para restaurar la contraseña dirijase a: http://localhost/proyectoBarber/resetContras.php';
 
 			// Enviar el correo
 			$mail->send();
-			header("Location: passwordSuccess.php");
-			exit();
+			$enviado = 'true';
+
 		} catch (Exception $e) {
 			echo "Error al enviar el correo: {$mail->ErrorInfo}";
 		}
 	}
 }
+	include("resetVista.php");
 ?>

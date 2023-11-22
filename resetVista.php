@@ -27,10 +27,24 @@
               <button type="submit" class="btn btn-ingresar" name="resetPassword">Enviar</button>
             </div>
 
-            <div class="div-registrarse">
+            <div class="mb-3 div-registrarse">
               <span>¿Ya te acordaste?</span>
-              <a href="vista.php">Iniciar Sesión</a>
+              <a href="index.php">Iniciar Sesión</a>
             </div>
+
+            <!-- VALIDACION SI ENVIA EL CORREO EXITOSAMENTE -->
+            <?php
+              if($enviado){
+                include("includes/exitoCorreo.php");
+
+                echo "<script>
+                // Espera 3 segundos y luego cierra la ventana
+                setTimeout(function() {
+                    window.close();
+                }, 3000);
+                </script>";
+              }
+            ?>
 
           </form>
     </section>
@@ -39,7 +53,3 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
   </body>
 </html>
-
-<?php
-  include("resetPassword.php");
-?>

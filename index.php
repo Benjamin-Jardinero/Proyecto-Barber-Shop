@@ -1,3 +1,3 @@
 <?php
-    include("vista.php");
+    include("loguear.php");
 ?>

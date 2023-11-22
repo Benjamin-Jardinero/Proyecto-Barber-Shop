@@ -1,6 +1,7 @@
+//Obtenemos la constante tienda
 const tienda = document.getElementById("tienda-online");
 
-//Creamos un foreach
+//Creamos un forEach para recorrer todos los productos
 
 productos.forEach((producto)=>{
     const div = document.createElement("div");

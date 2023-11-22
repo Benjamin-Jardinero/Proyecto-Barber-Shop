@@ -15,7 +15,7 @@
                 }
             }
   }else{
-    header("Location: ../vista.php");
+    header("Location: ../index.php");
   }
 ?>
 
@@ -31,50 +31,10 @@
     <link rel="stylesheet" href="style/style.css">
 </head>
 <body class="bg-dark">
+
 <!--HEADER / LOGO / NAVEGADOR-->
-    <header>
-          <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-           <div class="container-fluid">
+  <?php include("includes/header.php"); ?>
 
-              <a class="navbar-brand logo__a" href="index.php">
-                <img src="img/logo.png" alt="Logo"  class="d-inline-block align-text-top logo">
-              </a>
-
-              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-              </button>
-
-              <div class="collapse navbar-collapse header__item" id="navbarSupportedContent">
-                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                  <li class="nav-item">
-                    <a class="nav-link" aria-current="page" href="tienda.php">Tienda</a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link" href="sobremi.php">Sobre mí</a>
-                  </li>
-                   <li class="nav-item">
-                    <a class="nav-link" href="contacto.php">Contacto</a>
-                  </li>
-
-                  <li class="nav-item dropdown" id="dropdown-list">
-                      <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                        Yo
-                      </a>
-                      <ul class="dropdown-menu dropdown-menu-dark">
-                        <li><a href="perfil.php"><i class="fa-regular fa-user"></i> Perfil</a></li>
-                        <li><a href="#"><i class="fa-solid fa-circle-info"></i> Ayuda</a></li>
-                        <li><a href="../cerrarsesion.php"><i class="fa-solid fa-circle-xmark"></i> Cerrar sesión</a></li>
-                      </ul>
-                  </li>
-                </ul>
-                <form class="d-flex">
-                    <input class="form-control me-2" type="search" placeholder="Buscar" aria-label="Search">
-                    <button class="btn btn-outline-light" type="submit">Search</button>
-                </form>
-              </div>
-            </div>
-          </nav>
-    </header>
 <!-- SECTION / CAROUSEL / TIENDA -->
   <section class="container">
     <div id="carouselExampleDark" class="carousel carousel-dark slide " data-bs-ride="carousel">
@@ -116,29 +76,18 @@
     </div>
   </section>
 
-  <!-- SECCION / TIENDA -->
+<!-- SECCION / TIENDA / JS -->
   <section class="tienda bg-dark" id="tienda-online"></section>
 
-<!--FOOTER / REDES SOCIALES-->
-<footer class="bg-dark footer-redes">
-  <div class="footer__div--redes">
-      <ul>
-        <li><a href="https://api.whatsapp.com/send?phone=541127088361"><i class="fa-brands fa-whatsapp"></i><span> Whatsapp</span></a></li>
-        <li><a href="https://www.facebook.com/BenjaCARP2"><i class="fa-brands fa-facebook-square"></i><span> Facebook</span></a></li>
-        <li><a href="https://www.instagram.com/benja_laza"><i class="fa-brands fa-instagram"></i><span> Instagram</span></a></li>
-        <li><a href="https://twitter.com/BenjaLaza1"><i class="fa-brands fa-twitter"></i><span> Twitter</span></a></li>
-      </ul>
-  </div>
-  <div class="footer-copy">
-    <p><i class="fa-solid fa-copyright"></i> Todos los derechos estan reservados 2022</p>
-  </div>
-  </footer>
+<!--FOOTER / INCLUDES-->
+  <?php include("includes/footer.php"); ?>
 
-    <script src="js/stock.js"></script>
-    <script src="js/main.js"></script>
-    
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js" integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js" integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous"></script>
-    <script src="https://kit.fontawesome.com/ffb39b6180.js" crossorigin="anonymous"></script>
-  </body>
+<!-- JS / PRODUCTOS -->
+  <script src="js/stock.js"></script>
+  <script src="js/main.js"></script>
+<!-- JS / BOOTSTRAP -->
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js" integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js" integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous"></script>
+  <script src="https://kit.fontawesome.com/ffb39b6180.js" crossorigin="anonymous"></script>
+</body>
 </html>

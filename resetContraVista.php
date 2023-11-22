@@ -1,25 +1,3 @@
-<?php
-
-include("con_bd.php");
-session_start();
-$correoVerificar;
-
-if(isset($_SESSION['correo'])){
-  $mail = $_SESSION['correo'];
-  $consulta = "SELECT * FROM registros WHERE correo = '$mail'";
-  $resultado = mysqli_query($conex, $consulta);
-
-      if ($resultado) {
-        while ($row = $resultado -> fetch_array()) {
-          //Obtenemos el correo del usuario que ha pedido cambiar su contraseña
-          $correoVerificar = $row['correo'];
-        }
-      }
-} else{
-	  header("vista.php");
-}
-
-?>
 
 <!doctype html>
 <html lang="en">
@@ -60,16 +38,20 @@ if(isset($_SESSION['correo'])){
             <div class="mb-3 div-btn">
               <button type="submit" class="btn btn-ingresar" name="resetPassword" id="cambio-exito">Cambiar</button>
             </div>
+            
+            <!-- VALIDAR CONTRASEÑAS -->
+            <?php
+              if($errorContraseñas){
+                include("includes/errorRegistro.php");
+              } else if ($errorCampoVacio){
+                include("includes/error2.php");
+              }
+            ?>
 
           </form>
     </section>
-
-    <script src="js/exito.js"></script>
+    
     <script src="https://kit.fontawesome.com/ffb39b6180.js" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
   </body>
 </html>
-
-<?php
-  include("resetContras.php");
-?>

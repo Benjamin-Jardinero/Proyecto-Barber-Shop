@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Proyecto PHP</title>
+    <title>Barber Shop</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
     <link rel="stylesheet" href="css/estilos.css">
   </head>
@@ -52,13 +52,25 @@
 
             <div class="mb-3 div-registrarse">
               <span>¿Ya tenes cuenta?</span>
-              <a href="vista.php">Iniciar Sesión</a>
+              <a href="index.php">Iniciar Sesión</a>
             </div>
 
-            <div class="alert alert-warning alert-dismissible fade show" role="alert">
-                <strong class="strong-titulo">Complete los campos vacios</strong> 
-                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
-            </div>
+            <!-- VALIDACIONES -->
+            <?php 
+            if($registroOk){
+              // SI EL REGISTRO ES EXITOSO
+              include("includes/exito.php");
+            } else if($registroNoCoincide){
+              // SI EL REGISTRO NO COINCIDEN
+              include("includes/errorRegistro.php");
+            } else if($registroExiste){
+              // SI EL REGISTRO YA EXISTE
+              include("includes/errorRegistro2.php");
+            } else if($registroIncompleto){
+              // SI EL REGISTRO ESTA INCOMPLETO
+              include("includes/error2.php");
+            }
+            ?>
 
           </form>
     </section>
@@ -67,7 +79,3 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
   </body>
 </html>
-
-<?php
-    include("registrar.php");
-?>

@@ -1,6 +1,9 @@
 <?php
     include("con_bd.php");
     session_start();
+    
+    $errorLogin = "";
+    $errorLoginIncompleto = "";
 
     if (isset($_POST['iniciarsesion'])) {
         if (strlen($_POST['correoRegister']) > 1 && strlen($_POST['passwordRegister']) > 1) {
@@ -36,13 +39,13 @@
                         exit();
                     }
                 } else{
-                    header("Location: errorLogin.php");
-                    exit();
+                    $errorLogin = 'true';
                 }
             }
         } else {
-            header("Location: errorLogin2.php");
-            exit();
+            $errorLoginIncompleto = 'true';
         }
     }
+
+    include("loguearVista.php");
 ?>
