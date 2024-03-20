@@ -214,6 +214,11 @@ a:hover {
   color: #fd7e14;
 }
 
+.card-perfil .img-perfil {
+  width: 50%;
+  margin: auto;
+}
+
 .titulo-perfil h5 {
   font-family: cursive;
   font-size: 1.5rem;
@@ -376,8 +381,28 @@ a:hover {
   color: #f5f5dc;
 }
 
+.footer__div--redes ul li a .i-w {
+  color: #227d22;
+}
+
+.footer__div--redes ul li a .i-f {
+  color: #3636c7;
+}
+
+.footer__div--redes ul li a .i-i {
+  color: #ee7dff;
+}
+
+.footer__div--redes ul li a .i-t {
+  color: #9999ff;
+}
+
 .footer__div--redes ul li a:hover {
   color: black;
+}
+
+.footer__div--redes ul li a:hover i {
+  color: #000000;
 }
 
 @media (max-width: 820px) {

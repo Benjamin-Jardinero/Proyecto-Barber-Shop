@@ -15,9 +15,24 @@ $orange-500: #fd7e14;
             a{
                 text-decoration: none;
                 color: #f5f5dc;
+                .i-w{
+                    color: rgb(34, 125, 34);
+                }
+                .i-f{
+                    color: rgb(54, 54, 199);
+                }
+                .i-i{
+                    color: rgb(238, 125, 255);
+                }
+                .i-t{
+                    color: rgb(153, 153, 255);
+                }
             }
             a:hover{
                 color: black;
+                i{
+                    color: #000000;
+                }
             }
         }
     }

@@ -50,8 +50,8 @@
 
 <!-- SECCION / PERFIL -->
   <section class="container mb-3">
-      <div class="card" style="width:100%; margin: auto;">
-          <img src="../img/usuario.png" class="card-img-top" alt="Usuario">
+      <div class="card card-perfil">
+          <img src="../img/usuario.png" class="card-img-top img-perfil" alt="Usuario">
           <div class="card-body titulo-perfil">
               <h5 class="card-title" style="text-align: center;"><?php echo $nombre." ".$apellido?></h5>
           </div>

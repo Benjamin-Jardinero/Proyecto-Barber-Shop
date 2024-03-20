@@ -9,7 +9,7 @@ body{
     background-image: url(../img/fondo.jpg);
     background-repeat: no-repeat;
     background-size: cover;
-    height: 100vh;
+    height: 100%;
 }
 .main-container{
     margin: 20px auto;
@@ -38,11 +38,11 @@ body{
     border-radius: 20px;
     margin: 20px auto;
     padding: 20px;
-    width: 50%;
+    width: 45%;
 }
 
 /* Seccion Login Mobile */
-@media(max-width: 810px){
+@media(max-width: 905px){
     .seccion-container{
         width: 100%;
     }

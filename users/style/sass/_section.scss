@@ -153,6 +153,12 @@ $orange-500: #fd7e14;
 }
 
 //SECCION PERFIL
+.card-perfil{
+    .img-perfil{
+        width: 50%;
+        margin: auto;
+    }
+}
 .titulo-perfil{
     h5{
         font-family: cursive;
