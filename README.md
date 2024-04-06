@@ -6,12 +6,12 @@ Es una pagina web basada en una Barberia donde se podra pedir turnos para hacer 
 
 ### Instalación 🔧
 
-_1- Descargar el codigo fuente_,
-_2- Descomprimirlo_,
-_3- Instalar la base de datos_,
-_4- Abrir su XAMPP_,
-_5- Activar Apache y MySQL_,
-_6- Abrir el archivo desde su localhost con el nombre de la carpeta_,
+_1- Descargar el codigo fuente
+_2- Descomprimirlo
+_3- Instalar la base de datos
+_4- Abrir su XAMPP
+_5- Activar Apache y MySQL
+_6- Abrir el archivo desde su localhost con el nombre de la carpeta
 
 ### Requisitos 📋
 
