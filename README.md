@@ -1,8 +1,8 @@
 # Barber Shop
 
-![image](https://github.com/Programador-Benja/Proyecto-Barber-Shop/assets/98435496/a8c70291-9da1-4ee7-beee-1e67464ad3fe)
-
 Es una pagina web basada en una Barberia donde se podra pedir turnos para hacer con el barbero o peluquero, realizar compras (Gorras, Gel, Peine, Maquinas, etc), etc. 
+
+![image](https://github.com/Programador-Benja/Proyecto-Barber-Shop/assets/98435496/a8c70291-9da1-4ee7-beee-1e67464ad3fe)
 
 ### Instalación 🔧
 
@@ -16,6 +16,9 @@ _6- Abrir el archivo desde su localhost con el nombre de la carpeta_
 ### Requisitos 📋
 
 _Se debera crear un usuario para poder ingresar en la pagina_
+
+![image](https://github.com/Programador-Benja/Proyecto-Barber-Shop/assets/98435496/5c237cdc-de3d-42b4-83b7-813fbfa3127c)
+
 
 ## Construido con 🛠️
 
