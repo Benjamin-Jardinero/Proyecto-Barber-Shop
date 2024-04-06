@@ -2,11 +2,6 @@
 
 Es una pagina web basada en una Barberia donde se podra pedir turnos para hacer con el barbero o peluquero, realizar compras (Gorras, Gel, Peine, Maquinas, etc), etc. 
 
-
-### Pre-requisitos 📋
-
-_Se debera crear un usuario para poder ingresar en la pagina_
-
 ### Instalación 🔧
 
 _1- Descargar el codigo fuente_
@@ -15,6 +10,10 @@ _3- Instalar la base de datos_
 _4- Abrir su XAMPP_
 _5- Activar Apache y Mysql_
 _6- Abrir el archivo desde su localhost con el nombre de la carpeta_
+
+### Requisitos 📋
+
+_Se debera crear un usuario para poder ingresar en la pagina_
 
 ## Construido con 🛠️
 
