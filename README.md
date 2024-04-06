@@ -28,7 +28,7 @@ _las herramientas que utilice para crear el proyecto son_
 
 ## Autores ✒️
 
-* **Benjamin Lazarte** - *Desarrollador Full Stack* - (https://github.com/Programador-Benja))
+* **Benjamin Lazarte** - *Desarrollador Full Stack* - (https://github.com/Programador-Benja)
 
 ## Licencia 📄
 
