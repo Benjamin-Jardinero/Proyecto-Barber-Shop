@@ -2,7 +2,7 @@
 
 Es una pagina web basada en una Barberia donde se podra pedir turnos para hacer con el barbero o peluquero, realizar compras (Gorras, Gel, Peine, Maquinas, etc), etc. 
 
-![image](https://github.com/Programador-Benja/Proyecto-Barber-Shop/assets/98435496/a8c70291-9da1-4ee7-beee-1e67464ad3fe)
+![image](https://github.com/Programador-Benja/Proyecto-Barber-Shop/assets/98435496/517a9f10-40af-4b44-ac75-d29f7c413bd3)
 
 ### Instalación 🔧
 
